@@ -1,0 +1,32 @@
+.TopBanner {
+    background:  radial-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url('BannerBackground.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+}
+
+.TopBannerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 2fr 1fr 15%;
+    gap: 3% 3%;
+    height: calc(100vh - 150px);
+}
+
+.BannerIcon {
+    margin: 0 auto;
+    border-style: none;
+    background: rgb(198,198,73);
+    background: radial-gradient(circle, rgba(198,198,73,0.47942927170868344) 1%, rgba(255,253,241,0) 72%);
+}
+
+.TopBanner h1 {
+    font-size: 45px;
+}
+

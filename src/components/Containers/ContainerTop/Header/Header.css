@@ -1,0 +1,35 @@
+.Header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #f8f9fa;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.BrandIcon {
+    justify-self: start;
+}
+
+.HeaderIcon:hover{
+    background-color: #c2b86d6c;
+    box-shadow:0px 0px 30px #fdec6e;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    border-radius: 90px;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.HeaderText {
+    justify-self: end;
+}
+
+.HeaderText i {
+    color: #FAD02C;
+    font-weight: 600;
+}

@@ -1,0 +1,15 @@
+
+.Visit {
+    background:  radial-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+      ), url('VisitBG.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: 100vh
+}
+
+
+

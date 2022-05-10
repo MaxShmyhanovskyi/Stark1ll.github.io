@@ -1,0 +1,98 @@
+.About {
+    background:  radial-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url('AboutBG.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.AboutContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: calc(100vh - 210px);
+}
+
+.RestaurantCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 0;
+    transition: transform .3s ease-in-out;
+    transform: scale(1.04);
+}
+
+.Card {
+}
+
+.Card:hover {
+    transform: scale(1.03);
+    background-color: #e9dc7d2c;
+    box-shadow:0px 0px 15px #fdec6e;
+    border-radius: 20px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+}
+
+.RestaurantCards img {
+    border-radius: 20px;
+    transition: transform .2s ease-in-out;
+}
+
+
+.RestaurantCards img:hover {
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    cursor: pointer;
+    
+}
+
+.CardText {
+  color: #0b8dff;
+  background: -webkit-linear-gradient(rgb(36, 65, 224), rgb(240, 13, 13));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-style: italic;
+  transition: opacity .2s, visibility .2s ease-in-out;
+  text-shadow:0px 0px 25px #fdec6e;
+}
+
+/* .CardText:hover{
+    font-size: 40px;
+    transition: all .2s ease-in-out;
+} */
+
+@media  (max-width: 900px) {
+    .AboutContainer {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .RestaurantCards {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        justify-items: center;
+        gap: 7px;
+    }
+
+    .Card img{
+        width: 150px;
+        height: 200px;
+    }
+}

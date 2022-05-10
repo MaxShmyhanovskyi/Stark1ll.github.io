@@ -1,0 +1,145 @@
+.Menu {
+    background:  radial-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ), url('../../assets/images/menu/menuBG.png');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: auto;
+    color: #fff;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.MenuContainer {
+    min-height: 100%;
+    max-width: 1200px;
+    display: grid;
+    margin: 0 auto;
+    padding: 1% 0% 3% 0%;
+    grid-template-columns: 20% 1fr;
+    gap: 10px;
+}
+
+.MenuHeader {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+.MenuMain {
+    display: grid;
+    align-items: center;
+}
+
+.AllMenuPage {
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+    gap: 1% 2%;
+    justify-items: center;
+    padding-bottom: 5%;
+}
+
+.AllMenuPage > div {
+    margin-left: 15px;
+    display: grid;
+    grid-template-rows: 15% 45% 25% 15%;
+    background: #141a1fe3;
+    border-radius: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.DishPage {
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 4% 6%;
+    justify-items: center;
+    padding-bottom: 5%;
+
+}
+
+.DishCard {
+    margin-left: 15px;
+    display: grid;
+    padding: 10px 20px;
+    grid-template-rows: 15% 50% 25% 10%;
+    background: #141a1fe3;
+    border-radius: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.DishCard:hover {
+    transform: scale(1.03);
+    box-shadow:0px 0px 15px #fdec6e;
+    border-radius: 20px;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+}
+
+.DishCard img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+}
+
+.DishTitle {
+    font-size: larger;
+    text-shadow: 0px 0px 15px #b3a11f;
+}
+
+.DishDescription {
+    line-height: normal;
+    padding-bottom: 5px;
+    font-size: small;
+    color: #ccc;
+}
+
+.DishPrice {
+    font-weight: 500;
+    border-radius: 15px;
+    background-color: #10093df6;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 4px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .Menu {
+        min-height: 100%;
+    }
+
+    .MenuContainer {
+        grid-template:  320px 1fr / 1fr ;
+        margin: 30px auto 0;
+        align-items: center;
+        padding: 1% 0% 10% 0%;
+        gap: 15px 0;
+    }
+
+    .AllMenuPage {
+        margin: 0 auto;
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: row;
+        gap: 3%;
+    }
+
+    .DishPage {
+        margin: 0 auto;
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        gap: 3%;
+    }
+
+    .DishCard {
+        width: 80%;
+    }
+}
