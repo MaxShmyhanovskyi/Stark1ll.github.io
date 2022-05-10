@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6aa0fcc2.css",
+    "main.js": "/static/js/main.c43c486c.js",
+    "static/js/787.fc831b8b.chunk.js": "/static/js/787.fc831b8b.chunk.js",
+    "static/media/chefBg.jpg": "/static/media/chefBg.00dff7ab2b9e2b70c205.jpg",
+    "static/media/VisitBG.jpg": "/static/media/VisitBG.a5d2e4fc4b448ae80fa9.jpg",
+    "static/media/AboutBG.jpg": "/static/media/AboutBG.edc081eeeb4604a5a13f.jpg",
+    "static/media/BannerBackground.jpg": "/static/media/BannerBackground.0c5a950d8d3ec80ade07.jpg",
+    "static/media/pizzaSalami.jpg": "/static/media/pizzaSalami.affba9078fdb8cb2247d.jpg",
+    "static/media/pizzaPineappleChicken.jpg": "/static/media/pizzaPineappleChicken.7d2d0d08348931d7588e.jpg",
+    "static/media/pizzaShroomsHam.jpg": "/static/media/pizzaShroomsHam.cc59c05180e7bcf2ac0a.jpg",
+    "static/media/pizza4Cheses.jpg": "/static/media/pizza4Cheses.9168a7c6a92df1ff92e1.jpg",
+    "static/media/saladCezar.jpg": "/static/media/saladCezar.c65be469240a6a947974.jpg",
+    "static/media/soupChicken.jpg": "/static/media/soupChicken.9b7cc9cdb428f003654d.jpg",
+    "static/media/saladGreek.jpg": "/static/media/saladGreek.d71edf9a94bb170ccb1c.jpg",
+    "static/media/saladBeef.jpg": "/static/media/saladBeef.c453725f1983e8fbe363.jpg",
+    "static/media/duckLeg.jpg": "/static/media/duckLeg.7c1de60c97e86c1622d9.jpg",
+    "static/media/cutletRabbit.jpg": "/static/media/cutletRabbit.5969c1ae22f7ca057003.jpg",
+    "static/media/pastaShrimps.jpg": "/static/media/pastaShrimps.f6392a61d8445d16697d.jpg",
+    "static/media/about1.jpg": "/static/media/about1.5d0ab2b828ba94c77c17.jpg",
+    "static/media/pastaCarbonara.jpg": "/static/media/pastaCarbonara.c76214cb9b7ef62596c3.jpg",
+    "static/media/pasta4Cheses.jpg": "/static/media/pasta4Cheses.11faaadbbb538c27b11d.jpg",
+    "static/media/cutletTurkey.jpg": "/static/media/cutletTurkey.594f2e6c8c0235e31377.jpg",
+    "static/media/about2.jpg": "/static/media/about2.1e2340dc407f5e1477f8.jpg",
+    "static/media/chef3.jpg": "/static/media/chef3.3c5d1a9867eefe829265.jpg",
+    "static/media/soupCreamShrooms.jpg": "/static/media/soupCreamShrooms.a7fc43edd7783fb03cb0.jpg",
+    "static/media/chef2.jpg": "/static/media/chef2.f564616fb0dfbfeb3183.jpg",
+    "static/media/chef1.jpg": "/static/media/chef1.efe322b4cf9c04586be4.jpg",
+    "index.html": "/index.html",
+    "main.6aa0fcc2.css.map": "/static/css/main.6aa0fcc2.css.map",
+    "main.c43c486c.js.map": "/static/js/main.c43c486c.js.map",
+    "787.fc831b8b.chunk.js.map": "/static/js/787.fc831b8b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6aa0fcc2.css",
+    "static/js/main.c43c486c.js"
+  ]
+}
