@@ -15,7 +15,7 @@ export const Menu = () => {
   const hotDishes = Object.values(menu.hotDishes);
 
   return (
-    <div className='Menu'>
+    <div className='Menu2'>
         <ContainerTop />
         <div className='MenuHeader'>
               <span>Takeout is available </span>
