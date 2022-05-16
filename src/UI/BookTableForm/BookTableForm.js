@@ -29,10 +29,11 @@ import { useEffect } from 'react';
         console.log(e)
             }
         }
-  
+   // CREATE VALIDATION INPUTS
     return (
       <div className='BookTable'>
           <span>Visit Us:</span>
+          
           <form onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" placeholder="First name" {...register("firstName", {required: true, maxLength: 20})} />
                 <input type="text" placeholder="Last name" {...register("lastName", {required: true, maxLength: 25})} />
