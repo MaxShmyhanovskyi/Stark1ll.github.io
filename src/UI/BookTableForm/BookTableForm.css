@@ -4,7 +4,7 @@
     background-color: #141a1f;
     background-size: cover;
     border-radius: 25px;
-    align-items: center;
+    place-items: center;
     display: grid;
     grid-template-rows: 1fr 6fr;
     padding: 1% 2%;

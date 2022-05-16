@@ -8,14 +8,9 @@ import { DishesCatalogue } from './DishesCatalogue'
 
 export const Menu = () => {
   
-  const soups = Object.values(menu.soups);
-  const pastas = Object.values(menu.pastas);
-  const pizzas = Object.values(menu.pizzas);
-  const salads = Object.values(menu.salads);
-  const hotDishes = Object.values(menu.hotDishes);
 
   return (
-    <div className='Menu2'>
+    <div className='Menu'>
         <ContainerTop />
         <div className='MenuHeader'>
               <span>Takeout is available </span>
@@ -29,17 +24,17 @@ export const Menu = () => {
             <div className='MenuInner'>
               <Routes>
                 <Route exact path='/'
-                element={<DishesCatalogue dishes={menu}/>} />
+                element={<DishesCatalogue menu={menu}/>} />
                 <Route exact path='/soups'
-                element={<DishesCatalogue dishes={soups}/>} />
+                element={<DishesCatalogue menu={menu}/>} />
                 <Route exact path='/pastas'
-                element={<DishesCatalogue dishes={pastas}/>} />
+                element={<DishesCatalogue menu={menu}/>} />
                 <Route exact path='/pizzas'
-                element={<DishesCatalogue dishes={pizzas}/>} />
+                element={<DishesCatalogue menu={menu}/>} />
                 <Route exact path='/salads'
-                element={<DishesCatalogue dishes={salads}/>} />
+                element={<DishesCatalogue menu={menu}/>} />
                 <Route exact path='/hot-dishes'
-                element={<DishesCatalogue dishes={hotDishes}/>} />
+                element={<DishesCatalogue menu={menu}/>} />
               </Routes>
             </div>
           </div>
