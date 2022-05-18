@@ -1,6 +1,6 @@
 .Header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 70% 10% 20%;
     color: #f8f9fa;
     align-items: center;
     max-width: 1200px;
@@ -33,3 +33,11 @@
     color: #FAD02C;
     font-weight: 600;
 }
+
+
+@media only screen and (max-device-width: 1200px) {
+    .Header {
+        grid-template-columns: 60% 20% 20%;
+    }
+    
+  }

@@ -14,7 +14,7 @@
 
         <div className='MenuNavbarInner'>
             <NavLink to='/menu/'>
-                All Menu
+                Everything
             </NavLink>
             <NavLink to='/menu/soups'>
                 Soups

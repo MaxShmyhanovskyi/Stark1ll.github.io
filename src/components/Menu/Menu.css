@@ -16,15 +16,14 @@
     max-width: 1200px;
     display: grid;
     margin: 0 auto;
-    padding: 1% 0% 3% 0%;
+    padding: 15px 0 25px;
     grid-template-columns: 20% 1fr;
-    gap: 10px;
+    gap: 0 20px;
 }
 
 .MenuHeader {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 15px;
 }
 
 .MenuMain {
@@ -36,39 +35,30 @@
 .AllMenuPage {
     margin: 0 auto;
     display: grid;
-    grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
-    gap: 1% 2%;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 25px 25px;
     place-items: center;
-    padding-bottom: 5%;
 }
 
-.AllMenuPage > div {
-    margin-left: 15px;
-    display: grid;
-    grid-template-rows: 15% 45% 25% 15%;
-    background: #141a1fe3;
-    border-radius: 30px;
-    place-items: center;
-}
 
 .DishPage {
     margin: 0 auto;
     display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    gap: 4% 6%;
-    place-items: center;
-    padding-bottom: 5%;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 25px 25px;
+    place-items: center
 
 }
 
 .DishCard {
-    margin-left: 15px;
     display: grid;
     padding: 10px 20px;
-    grid-template-rows: 15% 50% 25% 10%;
+    grid-template-rows: 15% 53% 22% 10%;
     background: #141a1fe3;
     border-radius: 30px;
     place-items: center;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .DishCard:hover {
@@ -90,10 +80,16 @@
 }
 
 .DishDescription {
+    justify-self: center;
     line-height: normal;
-    padding-bottom: 5px;
     font-size: small;
     color: #ccc;
+    min-height:max-content;
+}
+
+.DishCard:hover > .DishDescription{
+    transition: transform .2s ease-in-out;
+    transform: scale(1.05);
 }
 
 .DishPrice {
@@ -110,22 +106,23 @@
 @media only screen and (max-width: 900px) {
     .Menu {
         min-height: 100%;
+        margin: 0 auto;
     }
 
     .MenuContainer {
-        grid-template:  320px 1fr / 1fr ;
+        grid-template:  240px 1fr / 1fr ;
         margin: 30px auto 0;
         align-items: center;
         padding: 1% 0% 10% 0%;
         gap: 15px 0;
     }
 
-    .AllMenuPage {
+    .AllMenuPage .DishPage{
         margin: 0 auto;
-        width: 80%;
-        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        grid-template-columns: 1fr;
         grid-auto-flow: row;
-        gap: 3%;
+        gap: 10px 16px;
     }
 
     .DishPage {
@@ -133,10 +130,20 @@
         width: 80%;
         grid-template-columns: 1fr;
         grid-auto-flow: row;
-        gap: 3%;
+        gap: 10px 14px; 
     }
 
     .DishCard {
         width: 80%;
+        height: 90%;
+    }
+
+
+    .DishCard:hover > .DishDescription{
+        transition: transform .2s ease-in-out;
+        transform: scale(1.13);
+    }
+    .DishPrice {
+        width: 60%;
     }
 }
