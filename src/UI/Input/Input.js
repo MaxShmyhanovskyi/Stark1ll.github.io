@@ -10,7 +10,6 @@ export const Input = (props) => {
             label={props.label}
             value={props.value}
             pattern={props.pattern}
-            onChange={props.onChange}
             type={props.type}
         />
     </div>

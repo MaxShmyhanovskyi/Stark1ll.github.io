@@ -8,7 +8,6 @@ import { DishesCatalogue } from './DishesCatalogue'
 
 export const Menu = () => {
   
-
   return (
     <div className='Menu'>
         <ContainerTop />
@@ -20,7 +19,6 @@ export const Menu = () => {
           <MenuNavbar />
 
           <div className='MenuMain'>
-            
             <div className='MenuInner'>
               <Routes>
                 <Route exact path='/'

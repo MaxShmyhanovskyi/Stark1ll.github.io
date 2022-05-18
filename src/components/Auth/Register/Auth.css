@@ -1,0 +1,100 @@
+.Auth {
+    background:  radial-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ), url('../../../assets/images/auth/authBG.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      height: 100vh
+}
+
+.AuthFormContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.AuthFormContainer form {
+    background-color: #141a1f;
+    border-radius: 25px;
+    margin: 50px auto;
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    max-width: 700px;
+    padding: 15px 0;
+    justify-items: center;
+}
+
+.AuthTitle {
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgb(208, 255, 233);
+  text-shadow:0px 0px 10px #fdec6e;
+  border-bottom: 2px solid #fdec6e;
+}
+
+
+.AuthFormContainer form input {
+    border-radius: 25px;
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    width: 60%;
+}
+
+.ErrorMessage {
+  text-shadow:0px 0px 8px rgb(141, 4, 4);
+  color: #fff;
+  height: 40%;
+}
+
+.UserStatusButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.StatusButton {
+  align-self: center;
+justify-self: center;
+width: 120px;
+font-size: 16px;
+font-weight: 600;
+color: rgb(0, 0, 0);
+cursor: pointer;
+height: 45px;
+text-align:center;
+text-decoration: none;
+border: none;
+border-radius: 50px;
+transition: all .2s ease-in-out;
+}
+
+.StatusButton:hover {
+  -o-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  transform: scale(1.05);
+  }
+
+.submit {
+  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  box-shadow: 0px 1px 8px #24c64f;
+}
+
+.option2 {
+  background-image: linear-gradient(to right top, #928c8c, #d8d7d7); 
+}
+
+@media only screen and (max-device-width: 900px) {
+  .AuthFormContainer form {
+    width: 80%;
+  }
+}

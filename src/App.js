@@ -5,11 +5,15 @@ import { About } from './components/About/About';
 import { Chefs } from './components/Chefs/Chefs';
 import { Menu } from './components/Menu/Menu';
 import { Visit } from './components/Visit/Visit';
+import { SignIn } from './components/Auth/SignIn/SignIn';
+import { Register } from './components/Auth/Register/Register';
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/register' element={<Register />} />
         <Route path='/' element={<TopBanner />} />
         <Route path='/about' element={<About />} />
         <Route path='/menu/*' element={<Menu />} />

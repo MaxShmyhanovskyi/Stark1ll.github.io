@@ -1,6 +1,5 @@
-import { Pagination } from '@mui/material';
 import React from 'react';
-import { parsePath, useMatch} from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
 import './DishesCatalogue.css';
 import { useState, useEffect } from 'react';
 import axios from '../../../axios/axios';
@@ -35,19 +34,15 @@ export const DishesCatalogue = ({menu}) => {
   //       console.log(error)
   //     }
   // }
-
   const renderAllMenu = () => 
-      Object.values(menu).map((dish,index) => 
-        { 
-          return (
-            <div className='DishCard' key={index}>
-                <div className='DishTitle'>{dish.title}</div>
-                <img src={dish.photo} alt={dish.title}></img>
-                <div className='DishDescription'>{dish.description}</div>
-                <button className='DishPrice'>{dish.price}</button>
-            </div>
-          )
-        }
+    Object.values(menu).map((dish,index) => (
+        <div className='DishCard' key={index}>
+            <div className='DishTitle'>{dish.title}</div>
+            <img src={dish.photo} alt={dish.title}></img>
+            <div className='DishDescription'>{dish.description}</div>
+            <button className='DishPrice'>{dish.price}</button>
+        </div>
+      )
     );
 
 
@@ -66,10 +61,10 @@ export const DishesCatalogue = ({menu}) => {
 
 
   return (   
-      <div className={(matchMenu) ? 'AllMenuPage' :'DishPage'}>
+      <div className='DishPage'>
         {(matchMenu) ? renderAllMenu() :  renderDishCards()}
         {/* <button onClick={fetchMenuData()}>Fetch Data</button> */}
-        <Pagination count={3}/>
       </div>
   )
 }
+

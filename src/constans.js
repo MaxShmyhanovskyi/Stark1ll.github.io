@@ -87,21 +87,21 @@ export const menu = {
       category: 'salads',
       title: 'Tongue & Arugula Salad',
       photo: saladBeef,
-      description: 'Salad with boiled tongue, leaves of lola-rosa salad and arugula, tomatoes, gherkins, boiled quail eggs and mustard sauce. weight: 220g',
+      description: 'Boiled tongue, leaves of lola-rosa salad & arugula, tomatoes, gherkins, boiled quail eggs & mustard sauce. weight: 220g',
       price: '210 Uah'
     },
     saladCezar: {
       category: 'salads',
       title: 'Cezar Salad',
       photo: saladCezar,
-      description: 'Crisp romaine lettuce & parmesan cheese, fried chicken fillet, special Cesar sauce with crunchy garlic toasts,  tomatoes and quail eggs. weight: 270g',
+      description: 'Crisp lettuce & parmesan, fried chicken fillet,Cesar sauce with crunchy garlic toasts,  tomatoes & quail eggs. weight: 270g',
       price: '186 Uah'
     },
     saladGreek: {
       category: 'salads',
-      title: 'Four Cheese Pizza',
+      title: 'Greek Salad',
       photo: saladGreek,
-      description: 'Salad with tomatoes, cucumber, bell pepper, lettuce, blue onion, feta cheese and two types of olives. weight: 210g',
+      description: 'Salad with tomatoes, cucumber, bell pepper, lettuce, blue onion, feta cheese and 2 olives. weight: 210g',
       price: '175 Uah'
     },
     cutletRabbit: {

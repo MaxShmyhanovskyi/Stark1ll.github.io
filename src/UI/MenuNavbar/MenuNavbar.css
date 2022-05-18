@@ -1,10 +1,10 @@
 .MenuNavbar {
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow: 0 0 10px 5px rgb(0 0 0 / 10%);
     margin: 10% 0 0 5%;
     display: grid;
     grid-template: 30% 70% / 1fr;
-    background-color: #141a1fbb;
+    background-color: #141a1f;
     background-size: cover;
     padding: 10px 30px;
     width: 70%;
@@ -13,6 +13,8 @@
     max-height: 442px;
     align-items: center;
     justify-items: center;
+    position: sticky;
+    top: 10px;
 }
 
 .MenuNavbarLogo {
@@ -34,7 +36,7 @@
     text-decoration: none;
     color: #fff;
     border-bottom: 1px groove #FAD02C;
-    padding: 2px 0;
+    padding: 3px;
 }
 
 .MenuNavbarInner a:hover {
@@ -60,22 +62,32 @@
     transform: rotate(360deg);
 }
 
-
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
 
 
 @media only screen and (max-width: 900px) {
     .MenuNavbar {
-        grid-template:   1fr 1fr / 1fr;
+        grid-template: 1fr / 1fr;
         margin: 0 auto;
         width: 100%;
-        max-width: 280px;
-        max-height: 280px;
+        height: 100%;
+        max-width: 300px;
+        max-height: 220px;
+        padding: 5px 12px;
     }
+
+    .MenuNavbarLogo {
+        display: none;
+    }
+
     .MenuNavbarInner {
         grid-template: 1fr 1fr / 1fr 1fr 1fr ;
-        align-items: center;
-        justify-items: center;
+        align-items: flex-end;
     }
     
   }
