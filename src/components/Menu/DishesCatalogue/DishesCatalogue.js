@@ -34,6 +34,7 @@ export const DishesCatalogue = ({menu}) => {
   //       console.log(error)
   //     }
   // }
+  
   const renderAllMenu = () => 
     Object.values(menu).map((dish,index) => (
         <div className='DishCard' key={index}>

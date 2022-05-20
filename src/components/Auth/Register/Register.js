@@ -4,13 +4,16 @@ import { ContainerTop } from '../../Containers/ContainerTop/ContainerTop'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import axios from '../../../axios/axios';
-import { ReactDOM } from 'react'
+import { ErrorMessage } from '@hookform/error-message'
+import { Input } from '../../../UI/Input/Input'
+import { RegisterFormControlValues } from '../../../constans'
+
 
 
 export const Register = () => {
     const { register, handleSubmit,getValues,reset,formState: { errors }} = useForm({
         defaultValues: {
-            phoneNumber: '+380'
+            phoneNumber: '+380',
         }
     });
 
@@ -25,20 +28,32 @@ export const Register = () => {
             }
         }
 
+    const renderFormInputs = () => 
+        Object.values(RegisterFormControlValues).map((field,index) => {
+    
+        return (
+            <Input register={register} key={index} errors={errors} {
+                    ...field
+                }
+            />
+            )
+        },
+    );
+
   return (
     <div className='Auth'>
         <ContainerTop />
         <div className='AuthFormContainer'>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <span className='AuthTitle'>Register Pigga account</span>
-                <input type="text" placeholder="User Name" 
+                {/* <input type="text" placeholder="User Name" 
                     {...register("userName", {required: "Username required", minLength: {
                         value: 4,
                         message:'Minimum 4 characters'
                         },
                         maxLength: 25})} />
-                {errors.userName && <span className='ErrorMessage'>{errors.userName.message}</span>}
-
+                <ErrorMessage className='ErrorMessage' errors={errors} name="userName" />
+                
                 <input type="password" placeholder="Password" 
                     {...register('password', {
                         required: "You must specify a password",
@@ -47,7 +62,7 @@ export const Register = () => {
                         message: "Password must have at least 8 characters"
                         }
                   })} />
-                {errors.password && <span className='ErrorMessage'>{errors.password.message}</span>}
+                <ErrorMessage className='ErrorMessage' errors={errors} name="password" />
 
                 <input  type="password" placeholder="Confirm Password" 
                     {...register('password_repeat', { 
@@ -55,7 +70,7 @@ export const Register = () => {
                         validate: value =>
                             value === getValues('password') || "The passwords do not match"
                     })} />
-                {errors.password_repeat && <span className='ErrorMessage'>{errors.password_repeat.message}</span>}
+                <ErrorMessage className='ErrorMessage' errors={errors} name="password_repeat" />
 
                 <input type="email" placeholder="E-mail" 
                     {...register("email", {required: "E-mail adress required", maxLength: 30,
@@ -64,16 +79,16 @@ export const Register = () => {
                         message: 'Please, enter correct E-mail'
                         }},
                 )} />
-                {errors.email && <span className='ErrorMessage'>{errors.email.message}</span>}
+                <ErrorMessage className='ErrorMessage' errors={errors} name="email" />
 
                 <input type="tel" placeholder="Phone: +380XXXXXXXXX" 
                     {...register("phoneNumber", {required: "This field is required",  pattern: {
                         value:/^[\+]?[0-9]{12}$/,
-                        message: 'Phone number required'
+                        message: 'Incorrect phone number'
                         }}
                 )} />
-                {errors.phoneNumber && <span className='ErrorMessage'>{errors.phoneNumber.message}</span>}
-
+                <ErrorMessage className='ErrorMessage' errors={errors} name="phoneNumber" /> */}
+                {renderFormInputs()}
                 <div className='UserStatusButtons'>
                     <button className='StatusButton submit' type='sumbit'>Register</button>
                     <Link to='/sign-in'>
