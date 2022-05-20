@@ -20,14 +20,14 @@ export const About = () => {
             <div className='RestaurantCards'>
                 <div className='Card'>
                     <Link to='/table-booking' className='CardText'>
-                        Visit Us!
+                        <span>Visit Us!</span>
                         <img src={about1} alt='VisitUs'/>
                     </Link>
                     
                 </div>
                 <div className='Card'>
                     <Link to='/menu' className='CardText'>
-                        Delicious!
+                        <span>Delicious!</span>
                         <img src={about2} alt='Menu'/>
                     </Link>
                 </div>

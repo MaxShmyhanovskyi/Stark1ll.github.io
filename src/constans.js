@@ -126,3 +126,61 @@ export const menu = {
       price: '175 Uah'
     },
 }
+
+
+export const RegisterFormControlValues = {
+  userName: {
+    type: 'text',
+    placeholder: 'User Name',
+    name: 'userName',
+    options: {
+      required: "Please, set your User Name",
+      minLength: { value: 6, message: 'Minimum 6 characters'},
+      maxLength: { value: 25, message: 'Maximum 25 characters'},
+    }
+  },
+  password: {
+    type: 'password',
+    placeholder: 'Enter Password',
+    name: 'password',
+    options: {
+      required: "This field is required",
+      minLength: { value: 8, message: 'Minimum 8 characters'},
+      maxLength: { value: 25, message: 'Maximum 25 characters'},
+    }
+  },
+  password_repeat: {
+    type: 'password',
+    placeholder: 'Confirm password',
+    name: 'password_repeat',
+    options: {
+      required: "Password confirmation is required",
+      // validate: value =>
+      //   value === getValues('password') || "The passwords do not match",         
+    }
+  },
+  email: {
+    type: 'email',
+    placeholder: 'Enter E-mail address',
+    name: 'email',
+    options: {
+      required: "E-mail address is required",
+      pattern: {
+        value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+        message: 'Please, enter correct E-mail'
+        }
+    }
+  },
+  phoneNumber: {
+    type: 'tel',
+    placeholder: 'Telephone',
+    name: 'phoneNumber',
+    options: {
+      required: "This field is required",
+      pattern: {
+        value:/^[\+]?[0-9]{12}$/,
+        message: 'Incorrect phone number'
+      },
+    }
+  },
+};
