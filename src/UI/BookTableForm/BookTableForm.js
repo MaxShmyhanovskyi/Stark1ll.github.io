@@ -21,7 +21,10 @@ import { useEffect } from 'react';
     const onSubmit = async data => {
         
         try {
-        await axios.post('/bookings.json', data);
+        await axios.post('/bookings.json', data, {headers: {
+          Authorization: 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjZmOGUxY2IxNTY0MTQ2M2M2ZGYwZjMzMzk0YjAzYzkyZmNjODg5YWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcGlnZ2EtMjkyOTciLCJhdWQiOiJwaWdnYS0yOTI5NyIsImF1dGhfdGltZSI6MTY1MzQxMTQxOSwidXNlcl9pZCI6IlBzV3dsRE1xUnNXWnljM2tiUlFlM0tBNjhXSDIiLCJzdWIiOiJQc1d3bERNcVJzV1p5YzNrYlJRZTNLQTY4V0gyIiwiaWF0IjoxNjUzNDExNDE5LCJleHAiOjE2NTM0MTUwMTksImVtYWlsIjoidGVzdDFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRlc3QxQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.eriL0vW7GEYbUKL-ylTgPLMyjzuCNHlOOZLQPGkUeYfSGQfJQyI76QA-9OCQ75Eksbwfby0iPmAhKcCs4qunks3EKb8u-PHoZTre8CzSRuIToSpiWmD1DyDXv3R8ja5whHlu1EbPUef0b9kwnCnR6OnSTaXv84RYni6BtUqDnMPaewQN9nepp1b8axmkdTBP0GDZelAJzlwwWYbkpkaulXepb_ikVWMsNMAV6tfVEiYBHApfncJwqgcoiTckfpWu13c0eRhmSAd2hDjfixcsB_xBVhp2Feise_44IzcZNaH1pFxqM2j8YMRcE8eP222TeH1OSqshT1a4BmXFXN42bA'
+          }
+        });
         alert(`Thank you, ${getValues('firstName')}! we're waiting for on ${getValues('desiredDate')}`);
         reset();
           

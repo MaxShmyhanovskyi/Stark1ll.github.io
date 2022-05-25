@@ -78,6 +78,11 @@ border-radius: 50px;
 transition: all .2s ease-in-out;
 }
 
+.StatusButton a {
+  text-decoration: none;
+  color:#051a0a;
+}
+
 .StatusButton:hover {
   -o-transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;

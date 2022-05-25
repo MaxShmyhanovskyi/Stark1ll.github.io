@@ -128,15 +128,29 @@ export const menu = {
 }
 
 
-export const RegisterFormControlValues = {
-  userName: {
-    type: 'text',
-    placeholder: 'User Name',
-    name: 'userName',
+export const getRegisterFormControlValues = (getValues) => 
+
+  ({
+  //   userName: {
+  //   type: 'text',
+  //   placeholder: 'User Name',
+  //   name: 'userName',
+  //   options: {
+  //     required: "Please, set your User Name",
+  //     minLength: { value: 6, message: 'Minimum 6 characters'},
+  //     maxLength: { value: 25, message: 'Maximum 25 characters'},
+  //   }
+  // },
+  email: {
+    type: 'email',
+    placeholder: 'Enter E-mail address',
+    name: 'email',
     options: {
-      required: "Please, set your User Name",
-      minLength: { value: 6, message: 'Minimum 6 characters'},
-      maxLength: { value: 25, message: 'Maximum 25 characters'},
+      required: "E-mail address is required",
+      pattern: {
+        value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+        message: 'Please, enter correct E-mail'
+        }
     }
   },
   password: {
@@ -155,10 +169,26 @@ export const RegisterFormControlValues = {
     name: 'password_repeat',
     options: {
       required: "Password confirmation is required",
-      // validate: value =>
-      //   value === getValues('password') || "The passwords do not match",         
+      validate: value =>
+        value === getValues('password') || "The passwords do not match",         
     }
   },
+
+  // phoneNumber: {
+  //   type: 'tel',
+  //   placeholder: 'Telephone',
+  //   name: 'phoneNumber',
+  //   options: {
+  //     required: "This field is required",
+  //     pattern: {
+  //       value:/^[\+]?[0-9]{12}$/,
+  //       message: 'Incorrect phone number'
+  //     },
+  //   }
+  // },
+});
+
+export const getSignInFormControlValues = () => ({
   email: {
     type: 'email',
     placeholder: 'Enter E-mail address',
@@ -171,16 +201,12 @@ export const RegisterFormControlValues = {
         }
     }
   },
-  phoneNumber: {
-    type: 'tel',
-    placeholder: 'Telephone',
-    name: 'phoneNumber',
+  password: {
+    type: 'password',
+    placeholder: 'Password',
+    name: 'password',
     options: {
-      required: "This field is required",
-      pattern: {
-        value:/^[\+]?[0-9]{12}$/,
-        message: 'Incorrect phone number'
-      },
+      required: 'Please,enter your password',
     }
-  },
-};
+  }
+})
