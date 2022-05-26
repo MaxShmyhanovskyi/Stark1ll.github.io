@@ -1,0 +1,9 @@
+.Account {
+    background-color: rgba(201, 156, 101, 0.76);
+    min-height: 100vh;
+}
+
+.LogOutButton {
+    border: 1px solid rgb(14, 11, 11);
+    padding: 4px 6px;
+}
