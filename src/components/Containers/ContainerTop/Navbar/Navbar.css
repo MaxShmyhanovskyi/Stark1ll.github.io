@@ -14,15 +14,15 @@
     margin: 0;
     padding: 3px;
     box-sizing: border-box;
+    transition: ease-in 0.13s;
 }
 
 .Navbar a:hover {
     transition: ease-in 0.13s;
-    font-style: italic;
     color: #FAD02C;
     font-size: 110%;
     background-color: #0b0535c7;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow:0px 0px 10px #fdec6e;
     padding: 0;
 }

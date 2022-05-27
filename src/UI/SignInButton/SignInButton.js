@@ -6,7 +6,7 @@ export const SignInButton = () => {
   return (
     <>
     <Link to='/sign-in'>
-        <button className='SignInButton'>Sign in</button>
+        <button className='ChangeUserStateButton'>Sign in</button>
     </Link>
     </>
   )

@@ -11,11 +11,15 @@ import 'firebase/auth';
 import { AuthContextProvider } from './context/AuthContext';
 import { Account } from './components/Account/Account';
 import { ProtectedRoute } from './components/ProtectedRoute/ProtectedRoute';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div className="App">
       <AuthContextProvider>
+      <ToastContainer 
+        
+      />
         <Routes>
           <Route path='/sign-in' element={<SignIn />} />
           <Route path='/register' element={<Register />} />

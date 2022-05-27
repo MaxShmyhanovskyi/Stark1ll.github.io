@@ -12,12 +12,12 @@ export const Menu = () => {
     <div className='Menu'>
         <ContainerTop />
         <div className='MenuHeader'>
-              <span>Takeout is available </span>
-              <span>Please, choose our dishes:</span>
-            </div>
+          <span>Takeout is available </span>
+          <span>Please, choose our dishes:</span>
+        </div>
+
         <div className='MenuContainer'>
           <MenuNavbar />
-
           <div className='MenuMain'>
             <div className='MenuInner'>
               <Routes>

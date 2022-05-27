@@ -6,7 +6,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Input } from '../../../UI/Input/Input'
 import { getRegisterFormControlValues } from '../../../constans'
 import { UserAuth } from '../../../context/AuthContext'
-
+import { showSignUpError } from '../../../firebase/firebaseErrorsHandle'
+import { ToastContainer,toast } from 'react-toastify'
 
 
 export const Register = () => {
@@ -14,16 +15,14 @@ export const Register = () => {
     const { createUser } = UserAuth();
     const navigate = useNavigate();
 
-    const signUpEmailPassword = async (event) => {
-        event.preventDefault();
-        
-        const loginEmail = getValues('email');
-        const loginPassword = getValues('password');
+    const signUpEmailPassword = async (data) => {
+        console.log(data)
         try {
-            createUser(loginEmail, loginPassword);
+            await createUser(getValues('email'), getValues('password'));
+            toast.success('Your account has been created!');
             navigate("/account");
-            reset();
         } catch (error) {
+            showSignUpError(error);
             console.log(error)
         }
     } 
@@ -44,16 +43,17 @@ export const Register = () => {
     <div className='Auth'>
         <ContainerTop />
         <div className='AuthFormContainer'>
-            <form onSubmit={event => handleSubmit(signUpEmailPassword(event))}>
+            <form onSubmit={handleSubmit(data => signUpEmailPassword(data))}>
                 <span className='AuthTitle'>Register Pigga account</span>
 
                 {renderFormInputs()}
                 
                 <div className='UserStatusButtons'>
                     <button className='StatusButton submit' type='sumbit'>Register</button>
-                    <button className='StatusButton option2'>
-                        <Link to='/sign-in'>Already a Customer?</Link>
-                    </button>
+                    
+                    <Link to='/sign-in' >
+                        <button className='StatusButton'>Already a Customer?</button>
+                    </Link>
                 </div>
             </form>
         </div>

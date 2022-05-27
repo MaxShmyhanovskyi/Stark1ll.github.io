@@ -21,9 +21,22 @@
     gap: 0 20px;
 }
 
-.MenuHeader {
+.MenuHeader{
     display: grid;
     grid-template-rows: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background: #141a1ff1;
+}
+
+.MenuHeader span{
+    text-shadow: 3px 0px 15px #f8df1f;
+    font-size: 26px;
+    font-style: italic;
+    color: #dfcf55d8;
+    font-weight: 300;
+    
 }
 
 .MenuMain {
@@ -59,6 +72,7 @@
     place-items: center;
     max-width: 90%;
     max-height: 90%;
+    transition: all 0.15s ease-in;
 }
 
 .DishCard:hover {
@@ -82,9 +96,11 @@
 .DishDescription {
     justify-self: center;
     line-height: normal;
-    font-size: small;
+    font-size: 12px;
     color: #ccc;
     min-height:max-content;
+    font-weight: 400;
+    transition: all 0.15s ease-in;
 }
 
 .DishCard:hover > .DishDescription{
@@ -115,6 +131,10 @@
         align-items: center;
         padding: 1% 0% 10% 0%;
         gap: 15px 0;
+    }
+
+    .MenuHeader {
+        width: 80%;
     }
 
     .AllMenuPage .DishPage{
