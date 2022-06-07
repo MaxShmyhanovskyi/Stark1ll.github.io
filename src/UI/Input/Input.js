@@ -1,6 +1,5 @@
 import React from 'react'
 import './Input.css'
-import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
 
 export const Input = (props) => {

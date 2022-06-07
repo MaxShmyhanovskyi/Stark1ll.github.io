@@ -1,29 +1,36 @@
 import React from 'react'
 import './Account.css'
 import { UserAuth } from '../../context/AuthContext'
-import { useNavigate } from 'react-router-dom'
+import { Routes,Route } from 'react-router-dom'
+import { LogoutButton } from '../../UI/LogoutButton/LogoutButton'
+import { AccountNavbar } from '../../UI/AccountNavbar/AccountNavbar'
+import { OrderHistory } from './OrderHistory/OrderHistory'
+import { DeliveryAddresses } from './DeliveryAddresses/DeliveryAddresses'
+import { AccountInformation } from './AccountInformation/AccountInformation'
 
 export const Account = () => {
-    const { user, logout } = UserAuth();
-    const navigate = useNavigate();
-
-    const handleLogOut = async () => {
-        try {
-            await logout();
-            navigate('/ ');
-            console.log('You are Logged Out');
-        } catch (error) {
-            console.log(error.message);
-        }
-    }
+  const { user, logout } = UserAuth();
+  console.log(user.phoneNumber, user.displayName)
 
   return (
     <div className='Account'>
-        <span>Welcome to Your Account!</span>
-        <br/>
-        <p>User email: {user && user.email}</p>
+        <div className='AccountContainer'>
+          <AccountNavbar />
+          <div className='AccountInner'>
+            <div className='AccountHeader'>
+              <span className='AuthTitle'>Welcome, {user.displayName}!</span>
+            </div>
+            <Routes>
+              <Route path='/' element={<AccountInformation />} />
+              <Route path='/orders' element={<OrderHistory />} />
+              <Route path='/delivery' element={<DeliveryAddresses />} />
+            </Routes>
+            
+              <LogoutButton />
+          </div>
+        </div>
+    
 
-        <button className='LogOutButton' onClick={handleLogOut}>Log Out</button>
     </div>
   )
 }

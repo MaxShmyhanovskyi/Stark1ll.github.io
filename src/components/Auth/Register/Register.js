@@ -1,59 +1,51 @@
 import React, { useState } from 'react'
 import './Auth.css'
-import { ContainerTop } from '../../Containers/ContainerTop/ContainerTop'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
-import { Input } from '../../../UI/Input/Input'
+import { renderFormInputs } from '../../../UI/renderFormInputs'
 import { getRegisterFormControlValues } from '../../../constans'
 import { UserAuth } from '../../../context/AuthContext'
-
+import { showSignUpError } from '../../../firebase/firebaseErrorsHandle'
+import { toast } from 'react-toastify'
+import axios from '../../../axios/axios'
 
 
 export const Register = () => {
-    const { register, handleSubmit,getValues,reset,formState: { errors }} = useForm({});
-    const { createUser } = UserAuth();
+    const { register, handleSubmit,getValues,reset,formState: { errors }} = useForm({
+        defaultValues: {
+            phoneNumber: '+38'
+        }
+    });
+    const { createUser, updateUserInfo } = UserAuth();
     const navigate = useNavigate();
 
-    const signUpEmailPassword = async (event) => {
-        event.preventDefault();
-        
-        const loginEmail = getValues('email');
-        const loginPassword = getValues('password');
+    const signUpEmailPassword = async (data) => {
         try {
-            createUser(loginEmail, loginPassword);
+            await createUser(getValues('email'), getValues('password'));
+            await updateUserInfo(getValues('fullName'),getValues('phoneNumber'));
+            axios.post('users.json',data)
+            toast.success('Your account has been created!');
             navigate("/account");
-            reset();
         } catch (error) {
+            showSignUpError(error);
             console.log(error)
         }
     } 
 
-    const renderFormInputs = () => 
-        Object.values(getRegisterFormControlValues(getValues)).map((field,index) => {
-    
-        return (
-            <Input register={register} key={index} errors={errors} {
-                    ...field
-                }
-            />
-            )
-        },
-    );
-
   return (
     <div className='Auth'>
-        <ContainerTop />
         <div className='AuthFormContainer'>
-            <form onSubmit={event => handleSubmit(signUpEmailPassword(event))}>
+            <form onSubmit={handleSubmit(data => signUpEmailPassword(data))}>
                 <span className='AuthTitle'>Register Pigga account</span>
 
-                {renderFormInputs()}
+                {renderFormInputs(getRegisterFormControlValues(getValues),register,errors)}
                 
                 <div className='UserStatusButtons'>
                     <button className='StatusButton submit' type='sumbit'>Register</button>
-                    <button className='StatusButton option2'>
-                        <Link to='/sign-in'>Already a Customer?</Link>
-                    </button>
+                    
+                    <Link to='/sign-in' className='StatusButton'>
+                        <button className='StatusButton option2'>Already a Customer?</button>
+                    </Link>
                 </div>
             </form>
         </div>

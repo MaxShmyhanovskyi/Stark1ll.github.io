@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 export const About = () => {
   return (
     <div className='About'>
-        <ContainerTop />
         <div className='AboutContainer'>
             <div className='WorkingSchedule'>
                 <p>Opening Times</p>

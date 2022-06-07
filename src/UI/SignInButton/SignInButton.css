@@ -1,22 +1,40 @@
-.SignInButton {
+.ChangeUserStateButton {
     border: 5em;
     cursor: pointer;
     outline: none;
     font-size: 16px;
     font-weight: 500;
-    padding: 0.7em 1em;
+    padding: 0.4em 1em;
     border-radius: 90px;
     transition: all .2s ease-in-out;
     transform: scale(1);
     background: transparent;
     color: #fff;
+    text-decoration: none;
 }
   
-.SignInButton:hover {
+.ChangeUserStateButton:hover {
 background-color: #160875af;
 box-shadow:0px 1px 10px #fdec6e;
-transition: all .2s ease;
-transform: scale(1.05);
+transition: all .2s ease-in-out;
+transform: scale(1.04);
 color: #FAD02C;
-font-size: 17px;
 }
+
+
+@media only screen and (max-width: 1200px) {
+    .ChangeUserStateButton {
+        border: 3em;
+        font-size: 14px;
+        padding: 0.3em 0.7em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .ChangeUserStateButton {
+        border: 2em;
+        font-size: 14px;
+        padding: 0.2em 0.6em;
+    }
+    
+  }

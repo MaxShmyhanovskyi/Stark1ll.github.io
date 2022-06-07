@@ -1,0 +1,44 @@
+.AccountNavbar {
+    border-radius: 30px;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 10%);
+    background-color: #141a1f;
+    background-size: cover;
+    width: 80%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 160px;
+    place-content: center;
+    display: grid;
+    margin-top: 15%;
+    gap: 5%;
+    
+}
+
+
+.AccountNavbar a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    transition: all .2s;
+}
+
+.AccountNavbar a:hover {
+    transition: all .2s;
+    color: #FAD02C;
+    font-size: large;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .AccountNavbar {
+        grid-template-columns: repeat(3,1fr);
+        padding: 2px;
+        width: 100%;
+        place-content: center;
+        margin-top: 2%;
+        max-height: 140px;
+        max-width: 300px;
+        padding: 0 10px;
+    }
+  }

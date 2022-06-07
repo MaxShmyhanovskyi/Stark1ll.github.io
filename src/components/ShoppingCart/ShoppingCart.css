@@ -1,0 +1,25 @@
+.ShoppingCart {
+    background:  radial-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+        ), url('../../../images/menu/menuBG.png');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: auto;
+    color: #fff;
+    min-height: calc(100vh - 7.6em);
+}
+
+.ShoppingCartContainer {
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ShoppingCartHeader {
+    text-shadow: 3px 0px 15px #f8df1f;
+    font-size: 26px;
+    font-style: italic;
+    color: #dfcf55d8;
+    font-weight: 300;
+}

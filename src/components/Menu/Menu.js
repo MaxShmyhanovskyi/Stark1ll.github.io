@@ -1,6 +1,5 @@
 import React from 'react'
 import './Menu.css'
-import { ContainerTop } from '../Containers/ContainerTop/ContainerTop'
 import { MenuNavbar } from '../../UI/MenuNavbar/MenuNavbar'
 import { Routes,Route } from 'react-router-dom'
 import { menu } from '../../constans'
@@ -10,14 +9,12 @@ export const Menu = () => {
   
   return (
     <div className='Menu'>
-        <ContainerTop />
         <div className='MenuHeader'>
-              <span>Takeout is available </span>
-              <span>Please, choose our dishes:</span>
-            </div>
+          <span>Takeout is available </span>
+          <span>Please, choose our dishes:</span>
+        </div>
         <div className='MenuContainer'>
           <MenuNavbar />
-
           <div className='MenuMain'>
             <div className='MenuInner'>
               <Routes>

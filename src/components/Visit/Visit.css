@@ -8,8 +8,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    height: 100vh
+    height: calc(100vh - 7.6em);
 }
 
 
 
+.VisitContainer {
+  padding-top: 5%;
+}

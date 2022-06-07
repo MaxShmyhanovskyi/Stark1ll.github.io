@@ -1,0 +1,9 @@
+.SignInErrorSpan {
+    display: none;
+}
+
+.SignInErrorSpan .visible {
+    display: block;
+    color: aqua;
+    font-size: 26px;
+}

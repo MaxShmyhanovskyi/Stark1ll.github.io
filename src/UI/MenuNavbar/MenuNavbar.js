@@ -29,7 +29,7 @@
                 Salads
             </NavLink>
             <NavLink to='/menu/hot-dishes'>
-                Hot Dishes
+                Meat
             </NavLink>
         </div>
      </div>
