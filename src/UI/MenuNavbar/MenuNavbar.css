@@ -10,7 +10,7 @@
     width: 70%;
     height: 100%;
     max-width: 220px;
-    max-height: 442px;
+    max-height: 380px;
     align-items: center;
     justify-items: center;
     position: sticky;
@@ -24,35 +24,30 @@
 }
 
 .MenuNavbarInner {
-    align-items: center;
     display: grid;
     grid-template-rows: 16.67% * 6;
-    gap: 12px;
-    padding: 10px;
     width: 100%;
     font-size: 22px;
+    place-items: center;
+    height: 100%;
 }
-.MenuNavbarInner a{
+.MenuNavbarInner a {
+    padding-top: 5px 0;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: #fff;
     border-bottom: 1px groove #FAD02C;
-    padding: 3px;
+    transition: all .2s;
 }
 
 .MenuNavbarInner a:hover {
-    transition: ease-in 0.13s;
+    transition: all .2s;
     color: #FAD02C;
-    background-color: #0b0535c7;
-    border-radius: 15px;
-    box-shadow:0px 0px 10px #fdec6e;
-    border-bottom: 0;
+    border-bottom: none;
+    font-size: 1.1em;
 }
 
-
-.MenuNavbarLogo a:hover {
-    border: none;
-
-}
 
 .MenuNavbarLogo svg {
     transition: transform .4s ease-in-out;
@@ -74,11 +69,10 @@
     .MenuNavbar {
         grid-template: 1fr / 1fr;
         margin: 0 auto;
-        width: 100%;
+        width: 70%;
         height: 100%;
         max-width: 300px;
-        max-height: 220px;
-        padding: 5px 12px;
+        max-height: 140px;
     }
 
     .MenuNavbarLogo {
@@ -87,7 +81,11 @@
 
     .MenuNavbarInner {
         grid-template: 1fr 1fr / 1fr 1fr 1fr ;
-        align-items: flex-end;
+        gap: 6px;
+    }
+    
+    .MenuNavbarInner a {
+        height: 60%;
     }
     
   }

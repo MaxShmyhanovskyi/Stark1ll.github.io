@@ -1,13 +1,14 @@
 import React from 'react'
 import './Header.css'
 import HeaderIcon from './HeaderIcon'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { SignInButton } from '../../../../UI/SignInButton/SignInButton'
 import { UserAuth } from '../../../../context/AuthContext'
-import { LogoutButton } from '../../../../UI/LogoutButton/LogoutButton'
+import { FaShoppingBasket } from 'react-icons/fa'
 
 export const Header = () => {
   const { user, logout } = UserAuth();
+
 
   return (
     <div className='Header'>
@@ -16,6 +17,9 @@ export const Header = () => {
             <HeaderIcon/>
           </Link>
         </div>
+        <Link to='/shopping-cart' className='ShoppingBusketButton'>
+          <FaShoppingBasket size='85%' />
+        </Link>
         {(user) ? 
           <Link to='/account' className='ChangeUserStateButton'>My Account</Link>
         : 

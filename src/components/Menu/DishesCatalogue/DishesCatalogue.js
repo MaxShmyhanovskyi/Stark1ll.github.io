@@ -1,42 +1,46 @@
 import React from 'react';
 import { useMatch } from 'react-router-dom';
 import './DishesCatalogue.css';
+import ShoppingContext from '../../../context/ShoppingContext';
 
-export const DishesCatalogue = ({menu}) => {
+export const DishesCatalogue = () => {
   let matchMenu = useMatch('/menu/');
   let matchCategory = useMatch('/menu/:category');
 
-  const renderAllMenu = () => 
-    Object.values(menu).map((dish,index) => (
-        <div className='DishCard' key={index}>
-            <div className='DishTitle'>{dish.title}</div>
-            <img src={dish.photo} alt={dish.title}></img>
-            <div className='DishDescription'>{dish.description}</div>
-            <button className='DishPrice'>{dish.price}</button>
+  const renderAllMenu = (context) => 
+    Object.values(context.products).map((product,index) => (
+        <div className='ProductCard' key={index}>
+            <div className='ProductTitle'>{product.title}</div>
+            <img src={product.photo} alt={product.title}></img>
+            <div className='ProductDescription'>{product.description}</div>
+            <button className='ProductPrice' onClick={context.addProductToCart.bind(this, product)}>{product.price} UAH</button>
         </div>
       )
     );
 
 
-  const renderDishCards = () => 
-    Object.values(menu).map((dish,index) => {
-      return (dish.category === matchCategory.params.category) ? (
-        <div className='DishCard' key={index}>
-            <div className='DishTitle'>{dish.title}</div>
-            <img src={dish.photo} alt={dish.title}></img>
-            <div className='DishDescription'>{dish.description}</div>
-            <button className='DishPrice'>{dish.price}</button>
+  const renderDishCards = (context) => 
+    Object.values(context.products).map((product,index) => {
+      return (product.category === matchCategory.params.category) ? (
+        <div className='ProductCard' key={product.id}>
+            <div className='ProductTitle'>{product.title}</div>
+            <img src={product.photo} alt={product.title}></img>
+            <div className='ProductDescription'>{product.description}</div>
+            <button className='ProductPrice' onClick={context.addProductToCart.bind(this, product)}>{product.price} UAH</button>
         </div>
       ) : null
     }
 );
 
 
-  return (   
-      <div className='DishPage'>
-        {(matchMenu) ? renderAllMenu() :  renderDishCards()}
-        {/* <button onClick={fetchMenuData()}>Fetch Data</button> */}
-      </div>
+  return (
+    <ShoppingContext.Consumer>
+      {context => (
+        <div className='ProductPage'>
+          {(matchMenu) ? renderAllMenu(context) :  renderDishCards(context)}
+        </div>
+      )}
+    </ShoppingContext.Consumer>
   )
 }
 

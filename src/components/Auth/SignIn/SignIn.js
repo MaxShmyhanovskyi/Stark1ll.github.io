@@ -4,6 +4,7 @@ import { ContainerTop } from '../../Containers/ContainerTop/ContainerTop'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate} from 'react-router-dom'
 import { Input } from '../../../UI/Input/Input'
+import { renderFormInputs } from '../../../UI/renderFormInputs'
 import { getSignInFormControlValues } from '../../../constans'
 import { UserAuth } from '../../../context/AuthContext'
 import { showLoginError } from '../../../firebase/firebaseErrorsHandle'
@@ -17,8 +18,7 @@ export const SignIn = () => {
     const { userLogIn } = UserAuth();
  
 
-    const loginEmailPassword = async (event) => {
-        event.preventDefault();
+    const loginEmailPassword = async (data) => {
 
         try {
             await userLogIn(getValues('email'), getValues('password'));
@@ -30,32 +30,19 @@ export const SignIn = () => {
             
         }
     } 
-    
-    const renderFormInputs = () => 
-    Object.values(getSignInFormControlValues(getValues)).map((field,index) => {
-    
-        return (
-            <Input register={register} key={index} errors={errors} {
-                    ...field
-                }
-            />
-            )
-        },
-    );
         
   return (
     
     <div className='Auth'>
-        <ContainerTop />
             <div className='AuthFormContainer'>
-                <form onSubmit={event => handleSubmit(loginEmailPassword(event))}>
+                <form onSubmit={handleSubmit(data => loginEmailPassword(data))}>
                     <span className='AuthTitle'>Sign in</span>
 
-                    {renderFormInputs()}
+                    {renderFormInputs(getSignInFormControlValues(getValues),register,errors)}
 
                     <div className='UserStatusButtons'>
                         <button className='StatusButton submit' type='sumbit'>Sign In</button>
-                        <Link to='/register'>
+                        <Link to='/register' className='StatusButton'>
                             <button className='StatusButton option2'>Not register yet?</button>
                         </Link>
                     </div>

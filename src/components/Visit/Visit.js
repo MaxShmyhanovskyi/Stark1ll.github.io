@@ -7,8 +7,9 @@ export const Visit = (event) => {
 
   return (
     <div className='Visit'>
-        <ContainerTop />
+      <div className='VisitContainer'>
         <BookTableForm />
+      </div>
     </div>
   )
 }

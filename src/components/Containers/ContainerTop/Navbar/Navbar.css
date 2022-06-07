@@ -1,14 +1,17 @@
 .Navbar {
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
   margin: 0 auto;
-  align-items: center;
-  margin-bottom: 5px;
+  padding-bottom: 2.5px;
 }
 
+.NavbarContainer {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  align-items: center;
+  margin-bottom: 2.5px;
+}
 
-.Navbar a {
+.NavbarContainer a {
     text-decoration: wavy;
     color: #fff;
     margin: 0;
@@ -17,7 +20,7 @@
     transition: ease-in 0.13s;
 }
 
-.Navbar a:hover {
+.NavbarContainer a:hover {
     transition: ease-in 0.13s;
     color: #FAD02C;
     font-size: 110%;
@@ -28,7 +31,7 @@
 }
 
 @media only screen and (max-device-width: 1200px) {
-  .Navbar {
+  .NavbarContainer {
     grid-template: 1fr 1fr / 1fr 1fr;
   }
   

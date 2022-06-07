@@ -9,7 +9,6 @@ import { FaInstagram, FaFacebook, FaTwitter, FaGooglePlus} from 'react-icons/fa'
 export const Chefs = () => {
   return (
     <div className='Chefs'>
-        <ContainerTop />
         <div className='ChefsContainer'>
           <div className='ChefsHeader'>
             <h3> Great Team</h3>

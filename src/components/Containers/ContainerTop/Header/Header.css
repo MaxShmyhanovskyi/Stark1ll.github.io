@@ -1,8 +1,8 @@
 .Header {
     display: grid;
-    grid-template-columns: 70% 10% 20%;
+    grid-template-columns: 60% 10% 10% 20%;
     color: #f8f9fa;
-    align-items: center;
+    place-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 5px 0;
@@ -13,6 +13,13 @@
     justify-self: start;
 }
 
+.HeaderIcon {
+    transition: all 0.2s ease-in;
+    box-shadow: none;
+    border-radius: 90px;
+
+}
+
 .HeaderIcon:hover{
     background-color: #c2b86d6c;
     box-shadow:0px 0px 30px #fdec6e;
@@ -20,7 +27,6 @@
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
-    border-radius: 90px;
     cursor: pointer;
     transform: scale(1.05);
 }
@@ -34,10 +40,30 @@
     font-weight: 600;
 }
 
+.ShoppingBusketButton {
+    width: 35%;
+    height: 43%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    border-radius: 90px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
 
-@media only screen and (max-device-width: 1200px) {
+.ShoppingBusketButton:hover {
+    transition: all .2s ease-in;
+    background-color: #c2b86d6c;
+    box-shadow:0px 0px 15px #fdec6e;
+    transform: scale(1.1);
+}
+
+
+
+@media only screen and (max-width: 900px) {
     .Header {
-        grid-template-columns: 60% 20% 20%;
+        grid-template-columns: 30% 15% 120px 1fr;
+        justify-items: center;
     }
     
   }

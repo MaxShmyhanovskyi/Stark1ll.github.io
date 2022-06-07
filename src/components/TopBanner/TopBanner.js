@@ -7,7 +7,6 @@ import { ContainerTop } from '../Containers/ContainerTop/ContainerTop'
 export const TopBanner = () => {
   return (
     <div className='TopBanner'>
-      <ContainerTop />
       <div className='TopBannerContainer'>
         <div className='BannerIcon'>
           <BannerIcon/>

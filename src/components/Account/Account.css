@@ -1,9 +1,38 @@
 .Account {
-    background-color: rgba(201, 156, 101, 0.76);
-    min-height: 100vh;
+    background:  radial-gradient(
+        rgba(0, 0, 0, 0.45), 
+        rgba(0, 0, 0, 0.45)
+      ), url('../../assets/images/account/AccountBG.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    height: calc(100vh - 7.6em);
 }
 
-.LogOutButton {
-    border: 1px solid rgb(14, 11, 11);
-    padding: 4px 6px;
+.AccountContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    justify-items: center;
+    color: #141a1f;
+    height: calc(100vh - 7.6em);
 }
+
+.UserInfo {
+    margin-top: 20%;
+}
+
+.UserInfoForm {
+    display: grid;
+}
+
+@media only screen and (max-width: 700px) {
+    .Account {
+    }
+
+    .AccountContainer {
+        grid-template: 20% 1fr / 1fr;
+        gap: 20px;
+        height: 100%;
+    }
+  }

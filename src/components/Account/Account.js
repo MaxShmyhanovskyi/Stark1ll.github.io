@@ -1,23 +1,36 @@
 import React from 'react'
 import './Account.css'
 import { UserAuth } from '../../context/AuthContext'
-import { useNavigate } from 'react-router-dom'
-import { ContainerTop } from '../Containers/ContainerTop/ContainerTop'
+import { Routes,Route } from 'react-router-dom'
 import { LogoutButton } from '../../UI/LogoutButton/LogoutButton'
-import { ToastContainer,toast } from 'react-toastify'
+import { AccountNavbar } from '../../UI/AccountNavbar/AccountNavbar'
+import { OrderHistory } from './OrderHistory/OrderHistory'
+import { DeliveryAddresses } from './DeliveryAddresses/DeliveryAddresses'
+import { AccountInformation } from './AccountInformation/AccountInformation'
 
 export const Account = () => {
-    const { user, logout } = UserAuth();
-    const navigate = useNavigate();
-
+  const { user, logout } = UserAuth();
+  console.log(user.phoneNumber, user.displayName)
 
   return (
     <div className='Account'>
-        <ContainerTop />
-        <span>Welcome to Your Account!</span>
-        <br/>
-        <p>User email: {user && user.email}</p>
-        <LogoutButton />
+        <div className='AccountContainer'>
+          <AccountNavbar />
+          <div className='AccountInner'>
+            <div className='AccountHeader'>
+              <span className='AuthTitle'>Welcome, {user.displayName}!</span>
+            </div>
+            <Routes>
+              <Route path='/' element={<AccountInformation />} />
+              <Route path='/orders' element={<OrderHistory />} />
+              <Route path='/delivery' element={<DeliveryAddresses />} />
+            </Routes>
+            
+              <LogoutButton />
+          </div>
+        </div>
+    
+
     </div>
   )
 }
