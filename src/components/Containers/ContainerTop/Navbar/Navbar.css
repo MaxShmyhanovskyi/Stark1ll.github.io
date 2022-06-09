@@ -8,27 +8,25 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   align-items: center;
-  margin-bottom: 2.5px;
 }
 
 .NavbarContainer a {
-    text-decoration: wavy;
+    text-decoration: none;
     color: #fff;
-    margin: 0;
-    padding: 3px;
-    box-sizing: border-box;
-    transition: ease-in 0.13s;
+    padding: 0.25em 0;
+    transition: ease-in-out .2s;
+    margin-bottom: 0;
 }
 
-.NavbarContainer a:hover {
-    transition: ease-in 0.13s;
+.NavbarContainer a:hover, .NavbarContainer a:active{
+    transition: ease-in-out .2s;
     color: #FAD02C;
-    font-size: 110%;
     background-color: #0b0535c7;
     border-radius: 15px;
     box-shadow:0px 0px 10px #fdec6e;
-    padding: 0;
 }
+
+
 
 @media only screen and (max-device-width: 1200px) {
   .NavbarContainer {

@@ -25,7 +25,7 @@ export const menu = {
       category: 'soups',
       title: 'Chicken Soup with eggs',
       photo: soupChicken,
-      description: `Tasty chiken soup. Ingredients: Pasta, Chiken breast, Eggs, Carrot. weight: 220g`,
+      description: `Tasty chiken soup. Ingredients: Pasta, Chiken breast, Eggs, Carrot. Weight: 220g`,
       price: 120,
     },
     soupCreamShrooms: {
@@ -33,7 +33,7 @@ export const menu = {
       category: 'soups',
       title: 'Mushrooms Cream Soup',
       photo: soupCreamShrooms,
-      description: `Cream soup with Shrooms. Ingredients: Champinones, Cheese. weight: 220g`,
+      description: `Cream soup with Shrooms. Ingredients: Champinones, Cheese. Weight: 220g`,
       price: 110
     },
     pastaCarbonara: {
@@ -41,7 +41,7 @@ export const menu = {
       category: 'pastas',
       title: 'Pasta Carbonara',
       photo: pastaCarbonara,
-      description: 'Classic Carbonara. Ingredients: Pasta, Beacon, Eggs, Parmesan, Creams. weight: 250g',
+      description: 'Classic Carbonara. Ingredients: Pasta, Beacon, Eggs, Parmesan, Creams. Weight: 250g',
       price: 150
     },
     pastaShrimps: {
@@ -49,7 +49,7 @@ export const menu = {
       category: 'pastas',
       title: 'Alfredo with shrimps',
       photo: pastaShrimps,
-      description: `Our remake of Alfredo pasta. Ingredients: Fetuccine, Shrimps, Parmesan, Creams. weight: 250g`,
+      description: `Our remake of Alfredo pasta. Ingredients: Fetuccine, Shrimps, Parmesan, Creams. Weight: 250g`,
       price: 210
     },
     pasta4Cheses: {
@@ -57,7 +57,7 @@ export const menu = {
       category: 'pastas',
       title: 'Pasta 4 Chises',
       photo: pasta4Cheses,
-      description: 'For Chese Lovers. Ingredients: Farfalle, Parmesan, Dor-blue, Mozarella, Blue Chise. weight: 240g',
+      description: 'For Chese Lovers. Ingredients: Farfalle, Parmesan, Dor-blue, Mozarella, Blue Chise. Weight: 240g',
       price: 190
     },
     pizzaSalami: {
@@ -65,7 +65,7 @@ export const menu = {
       category: 'pizzas',
       title: 'Salami Pizza',
       photo: pizzaSalami,
-      description: 'Napoli & Validzhiano salami, tomato sauce , Mozzarella . Garnished with arugula. weight: 340g',
+      description: 'Napoli & Validzhiano salami, tomato sauce , Mozzarella . Garnished with arugula. Weight: 340g',
       price: 180
     },
     pizzaPineappleChicken: {
@@ -73,15 +73,15 @@ export const menu = {
       category: 'pizzas',
       title: 'Hawaian pizza',
       photo: pizzaPineappleChicken,
-      description: 'Tomato sauce, Mozzarella, chicken sousvide, pineapple. Garnished with arugula. weight: 340g',
+      description: 'Tomato sauce, Mozzarella, chicken sousvide, pineapple. Garnished with arugula. Weight: 340g',
       price: 180
     },
     pizzaShroomsHam: {
       id: 3003,
       category: 'pizzas',
-      title: 'Mushrooms & Ham Pizza',
+      title: 'Shrooms & Ham Pizza',
       photo: pizzaShroomsHam,
-      description: 'Ham, mushrooms, parmesan cheese and mozzarella, arugula, tomato. weight: 340g',
+      description: 'Ham, mushrooms, parmesan cheese and mozzarella, arugula, tomato. Weight: 340g',
       price: 210
     },
     pizza4Cheses: {
@@ -89,7 +89,7 @@ export const menu = {
       category: 'pizzas',
       title: 'Four Cheese Pizza',
       photo: pizza4Cheses,
-      description: 'Combination of four Italian cheeses: Add Blue, Mozzarella, Maazdam, Parmesan. weight: 340g',
+      description: 'Combination of four Italian cheeses: Add Blue, Mozzarella, Maazdam, Parmesan. Weight: 340g',
       price: 240
     },
     saladBeef: {
@@ -97,7 +97,7 @@ export const menu = {
       category: 'salads',
       title: 'Tongue & Arugula Salad',
       photo: saladBeef,
-      description: 'Boiled tongue, leaves of lola-rosa salad & arugula, tomatoes, gherkins, boiled quail eggs & mustard sauce. weight: 220g',
+      description: 'Boiled tongue, leaves of lola-rosa salad & arugula, tomatoes, gherkins, boiled quail eggs & mustard sauce. Weight: 220g',
       price: 210
     },
     saladCezar: {
@@ -105,7 +105,7 @@ export const menu = {
       category: 'salads',
       title: 'Cezar Salad',
       photo: saladCezar,
-      description: 'Crisp lettuce & parmesan, fried chicken fillet,Cesar sauce with crunchy garlic toasts,  tomatoes & quail eggs. weight: 270g',
+      description: 'Crisp lettuce & parmesan, fried chicken fillet,Cesar sauce with crunchy garlic toasts,  tomatoes & quail eggs. Weight: 270g',
       price: 186
     },
     saladGreek: {
@@ -113,7 +113,7 @@ export const menu = {
       category: 'salads',
       title: 'Greek Salad',
       photo: saladGreek,
-      description: 'Salad with tomatoes, cucumber, bell pepper, lettuce, blue onion, feta cheese and 2 olives. weight: 210g',
+      description: 'Salad with tomatoes, cucumber, bell pepper, lettuce, blue onion, feta cheese and 2 olives. Weight: 210g',
       price: 175
     },
     cutletRabbit: {
@@ -121,7 +121,7 @@ export const menu = {
       category: 'hot-dishes',
       title: 'Rabbit cutlets',
       photo: cutletRabbit,
-      description: 'Rabbit cutlets with mushroom sauce and mashed potatoes. weight: 140g',
+      description: 'Rabbit cutlets with mushroom sauce and mashed potatoes. Weight: 140g',
       price: 190
     },
     cutletTurkey: {
@@ -129,7 +129,7 @@ export const menu = {
       category: 'hot-dishes',
       title: 'Turkey cutlets',
       photo: cutletTurkey,
-      description: 'Turkey cutlets with mashed potatoes and creamy spinach sauce. weight: 120g',
+      description: 'Turkey cutlets with mashed potatoes and creamy spinach sauce. Weight: 120g',
       price: 210
     },
     duckLeg: {
@@ -137,7 +137,7 @@ export const menu = {
       category: 'hot-dishes',
       title: 'Duck leg',
       photo: duckLeg,
-      description: 'Duck leg with mashed potatoes and caramelized apples. weight: 150/100g',
+      description: 'Duck leg with mashed potatoes and caramelized apples. Weight: 150/100g',
       price: 175
     },
 }

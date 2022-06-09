@@ -2,6 +2,7 @@
  import { Link, NavLink } from 'react-router-dom'
  import './MenuNavbar.css'
  import BannerIcon from '../../components/TopBanner/BannerIcon'
+ import { FaShoppingBasket } from 'react-icons/fa'
  
  export const MenuNavbar = () => {
    return (
@@ -11,10 +12,14 @@
                 <BannerIcon />
             </Link>
         </div>
-
+        <div>
+            <NavLink to='/shopping-cart' className='MenuNavbarShoppingCart'>
+                Shopping Cart
+            </NavLink>
+        </div>
         <div className='MenuNavbarInner'>
             <NavLink to='/menu/'>
-                Everything
+                Menu
             </NavLink>
             <NavLink to='/menu/soups'>
                 Soups
@@ -31,6 +36,7 @@
             <NavLink to='/menu/hot-dishes'>
                 Meat
             </NavLink>
+            
         </div>
      </div>
    )

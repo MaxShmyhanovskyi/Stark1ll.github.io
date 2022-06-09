@@ -5,14 +5,16 @@ import { menu } from "../constans";
 
 export const GlobalState = (props)  => {
 
-  const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });
+  const [cartState, dispatch] = useReducer(shopReducer, {
+     cart: JSON.parse(localStorage.getItem('updatedCart')) || []
+    });
 
   const addProductToCart = product => {
     dispatch({ type: ADD_PRODUCT, product: product });
   };
 
-  const removeProductFromCart = productId => {
-    dispatch({ type: REMOVE_PRODUCT, productId: productId });
+  const removeProductFromCart = product => {
+    dispatch({ type: REMOVE_PRODUCT, product: product });
   };
 
   return (
