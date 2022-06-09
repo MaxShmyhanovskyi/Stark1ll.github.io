@@ -3,7 +3,7 @@ import React from "react";
 
 export default React.createContext({
   products: menu,
-  cart: [],
+  cart: () => JSON.parse(localStorage.getItem('updatedCart') || []), 
   addProductToCart: product => {},
-  removeProductFromCart: productId => {}
+  removeProductFromCart: product => {}
 });

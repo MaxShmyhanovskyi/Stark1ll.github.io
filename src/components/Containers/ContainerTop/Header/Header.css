@@ -1,6 +1,6 @@
 .Header {
     display: grid;
-    grid-template-columns: 60% 10% 10% 20%;
+    grid-template-columns: 50% 15% 15% 20%;
     color: #f8f9fa;
     place-items: center;
     max-width: 1200px;
@@ -40,30 +40,46 @@
     font-weight: 600;
 }
 
-.ShoppingBusketButton {
-    width: 35%;
-    height: 43%;
-    background: transparent;
-    border: none;
-    color: #fff;
-    border-radius: 90px;
+
+.ChangeUserStateButton, .ShoppingCartButton{
+    white-space: nowrap;
+    border: 5em;
     cursor: pointer;
-    transition: .2s ease-in-out;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0.4em 1em;
+    border-radius: 90px;
+    transition: all .2s ease-in-out;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+}
+  
+.ChangeUserStateButton:hover, .ShoppingCartButton:hover{
+background-color: #160875af;
+box-shadow:0px 1px 10px #fdec6e;
+transition: all .2s ease-in-out;
+color: #FAD02C;
 }
 
-.ShoppingBusketButton:hover {
-    transition: all .2s ease-in;
-    background-color: #c2b86d6c;
-    box-shadow:0px 0px 15px #fdec6e;
-    transform: scale(1.1);
-}
 
 
 
 @media only screen and (max-width: 900px) {
     .Header {
-        grid-template-columns: 30% 15% 120px 1fr;
+        grid-template-columns: 17% 28% 25% 1fr;
         justify-items: center;
     }
-    
-  }
+
+    .ShoppingCartIcon {
+        display: none;
+    }
+
+    .ChangeUserStateButton, .ShoppingCartButton{
+        border: 2em;
+        font-size: 14px;
+        padding: 0.2em 0.6em;
+    }
+}
+

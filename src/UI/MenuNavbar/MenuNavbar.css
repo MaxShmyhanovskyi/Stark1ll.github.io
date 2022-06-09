@@ -3,10 +3,10 @@
     box-shadow: 0 0 10px 5px rgb(0 0 0 / 10%);
     margin: 10% 0 0 5%;
     display: grid;
-    grid-template: 30% 70% / 1fr;
+    grid-template: 30% 10% 60% / auto;
     background-color: #141a1f;
     background-size: cover;
-    padding: 10px 30px;
+    padding: 5px 30px;
     width: 70%;
     height: 100%;
     max-width: 220px;
@@ -15,6 +15,8 @@
     justify-items: center;
     position: sticky;
     top: 10px;
+    text-decoration: none;
+    z-index: 1;
 }
 
 .MenuNavbarLogo {
@@ -23,14 +25,33 @@
 
 }
 
+.MenuNavbarShoppingCart {
+    text-decoration: none;
+    color: #fff;
+    transition: all .2s;
+    font-size: 1.3em;
+    display: block;
+    padding: 2px;
+    border-radius: 15px;
+}
+
+.MenuNavbarShoppingCart:hover {
+    background-color: #0b0535c7;
+    transition: all .2s;
+    color: #FAD02C;
+    font-size: 1.4em;
+}
+
 .MenuNavbarInner {
     display: grid;
-    grid-template-rows: 16.67% * 6;
+    grid-template-rows: 15% repeat(1fr,6);
     width: 100%;
     font-size: 22px;
     place-items: center;
     height: 100%;
 }
+
+
 .MenuNavbarInner a {
     padding-top: 5px 0;
     width: 100%;
@@ -67,12 +88,16 @@
 
 @media only screen and (max-width: 900px) {
     .MenuNavbar {
-        grid-template: 1fr / 1fr;
+        grid-template: 25% 1fr / 1fr;
         margin: 0 auto;
-        width: 70%;
+        width: 80%;
         height: 100%;
         max-width: 300px;
         max-height: 140px;
+    }
+
+    .MenuNavbarShoppingCart {
+        width: 100%;
     }
 
     .MenuNavbarLogo {

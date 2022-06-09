@@ -10,7 +10,6 @@ import { AccountInformation } from './AccountInformation/AccountInformation'
 
 export const Account = () => {
   const { user, logout } = UserAuth();
-  console.log(user.phoneNumber, user.displayName)
 
   return (
     <div className='Account'>
