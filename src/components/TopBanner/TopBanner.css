@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    height: calc(100vh - 7.6em);
+    min-height: calc(100vh - 7.6em);
 }
 
 .TopBannerContainer {
@@ -30,3 +30,15 @@
     font-size: 45px;
 }
 
+@media only screen and (max-width: 700px) {
+    .AccountNavbar {
+        grid-template-columns: repeat(3,1fr);
+        padding: 2px;
+        place-content: center;
+        margin-top: 2%;
+        padding: 0 10px;
+        max-width: 100%;
+        max-height: 45px;
+        border-radius: 20px;
+    }
+  }

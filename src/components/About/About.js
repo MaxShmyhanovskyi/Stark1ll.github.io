@@ -12,7 +12,7 @@ export const About = () => {
             <div className='WorkingSchedule'>
                 <p>Opening Times</p>
                 <h2>Working Times</h2>
-                <h4> Monday - Thursday:<br/>   7:00am - 12:00 pm</h4>
+                <h4> Monday - Thursday:<br/>   7:00am - 10:00 pm</h4>
                 <h4> Friday - Saturday :<br/>  7:00am - 12:00 pm</h4>
                 <h4> Saturday - Sunday :<br/>  7:00am - 12:00 pm</h4>
             </div>

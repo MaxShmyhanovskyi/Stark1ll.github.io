@@ -12,16 +12,16 @@ export const Chefs = () => {
         <div className='ChefsContainer'>
           <div className='ChefsHeader'>
             <h3> Great Team</h3>
-            <h1> Talented Chefs</h1>
+            <h2> Talented Chefs</h2>
           </div>
 
-          <div className='ChefsInfo'>
+          <div className='ChefsInfo mobile'>
             <div className='ChefsCard'>
               <img src={chef1} alt='chef1'/>
               
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                </div>
                 <div className='ChefsSocials'>
                   <FaInstagram className='Icon' />
                   <FaFacebook className='Icon' />
@@ -32,9 +32,9 @@ export const Chefs = () => {
               
             <div className='ChefsCard'>
               <img src={chef2} alt='chef2'/>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              </div>
               <div className='ChefsSocials'>
                 <FaInstagram className='Icon' />
                 <FaFacebook className='Icon' />
@@ -45,9 +45,9 @@ export const Chefs = () => {
 
             <div className='ChefsCard'>
               <img src={chef3} alt='chef3'/>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              </div>
               <div className='ChefsSocials'>
                 <FaInstagram className='Icon' />
                 <FaFacebook className='Icon' />

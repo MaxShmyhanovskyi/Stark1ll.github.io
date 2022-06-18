@@ -142,6 +142,33 @@ export const menu = {
     },
 }
 
+// export const getPersonalInfoFormContolValues = (getValues) =>
+
+//   ({
+//     fullName: {
+//       type: "text",
+//       placeholder: 'Full Name',
+//       name: 'fullName',
+//       options: {
+//         required: "Full Name required",
+//         maxLength: {
+//           value: 40,
+//           message: 'Maximum 40 characters!'
+//         },
+//         pattern: {
+//           value: /\w+\s\w+/,
+//           message: 'Please, enter correct Full Name',
+//         }
+//       }
+//     },
+//     changeFullNameButton: {
+//       type: "button",
+//       name: 'changeFullNameButton',
+//       placeholder: "Change Full Name",
+//       onclick: () => console.log('Button')
+//     }
+//   });
+
 
 export const getRegisterFormControlValues = (getValues) => 
 
@@ -192,18 +219,6 @@ export const getRegisterFormControlValues = (getValues) =>
       required: "Password confirmation is required",
       validate: value =>
         value === getValues('password') || "The passwords do not match",         
-    }
-  },
-  phoneNumber: {
-    type: 'tel',
-    placeholder: "Phone: +380XXXXXXXXX",
-    name: 'phoneNumber',
-    options: {
-      required: "Phone number required",
-      pattern: {
-        value: /^[\+]?[0-9]{12}$/,
-        message: 'Inccorect phone number',
-        }
     }
   },
 });
@@ -294,66 +309,82 @@ export const getBookingFormControlValues = () => ({
   }
 });
 
-// export const getUserInfoFormControlValues = (getValues) => ({
-
-//   fullName: {
-//     type: "text",
-//     placeholder: 'Full Name',
-//     name: 'fullName',
-//     options: {
-//       required: "Full Name required",
-//       maxLength: {
-//         value: 40,
-//         message: 'Maximum 40 characters!'
-//       },
-//       pattern: {
-//         value: /\w+\s\w+/,
-//         message: 'Please, enter correct Full Name',
-//       }
-//     }
-//   },
-//   phoneNumber: {
-//     type: 'tel',
-//     placeholder: "Phone: +380XXXXXXXXX",
-//     name: 'phoneNumber',
-//     options: {
-//       required: "Phone number required",
-//       pattern: {
-//         value: /^[\+]?[0-9]{12}$/,
-//         message: 'Inccorect phone number',
-//         }
-//     }
-//   },
-//   email: {
-//     type: 'email',
-//     placeholder: 'Enter E-mail address',
-//     name: 'email',
-//     options: {
-//       required: "E-mail address is required",
-//       pattern: {
-//         value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-//         message: 'Please, enter correct E-mail'
-//         }
-//     }
-//   },
-//   password: {
-//     type: 'password',
-//     placeholder: 'Enter Password',
-//     name: 'password',
-//     options: {
-//       required: "This field is required",
-//       minLength: { value: 8, message: 'Minimum 8 characters'},
-//       maxLength: { value: 25, message: 'Maximum 25 characters'},
-//     }
-//   },
-//   password_repeat: {
-//     type: 'password',
-//     placeholder: 'Confirm password',
-//     name: 'password_repeat',
-//     options: {
-//       required: "Password confirmation is required",
-//       validate: value =>
-//         value === getValues('password') || "The passwords do not match",         
-//     }
-//   },
-// });
+export const getUserDeliveryAddressFormControls = (getValues) => ({
+  fullName: {
+    type: "text",
+    placeholder: 'Full Name',
+    name: 'Full Name',
+    options: {
+      required: "Full Name required!",
+      maxLength: {
+        value: 40,
+        message: 'Maximum 40 characters!'
+      },
+      pattern: {
+        value: /\w+\s\w+/,
+        message: 'Please, enter correct Full Name',
+      }
+    }
+  },
+  phoneNumber: {
+    type: 'tel',
+    placeholder: "Phone: +380XXXXXXXXX",
+    name: 'Phone Number',
+    options: {
+      required: "Phone number required!",
+      pattern: {
+        value: /^[\+]?[0-9]{12}$/,
+        message: 'Inccorect phone number',
+        }
+    }
+  },
+  email: {
+    type: 'email',
+    placeholder: 'E-mail address',
+    name: 'E-mail',
+    options: {
+      required: "E-mail address is required",
+      pattern: {
+        value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+        message: 'Please, enter correct E-mail'
+        }
+    }
+  },
+  street: {
+    type: 'text',
+    placeholder: 'Street',
+    name: 'Street',
+    options: {
+      required: "Street name is required!"
+    }
+  },
+  building: {
+    type: 'text',
+    placeholder: 'Building',
+    name: 'Building',
+    options: {
+      required: "Building is required!"
+    }
+  },
+  apartment: {
+    type: 'number',
+    placeholder: 'Apartment',
+    name: 'Apartment',
+    options: {
+      required: "Apartment number is required!"
+    }
+  },
+  floor: {
+    type: 'number',
+    placeholder: 'Floor',
+    name: 'Floor',
+    options: {
+      required: "Floor number is required!"
+    }
+  },
+  note: {
+    type: 'text',
+    placeholder: 'Notes',
+    name: 'Note',
+  }
+})

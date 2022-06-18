@@ -4,26 +4,28 @@ import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 import { renderFormInputs } from '../../../UI/renderFormInputs'
 import { getRegisterFormControlValues } from '../../../constans'
-import { UserAuth } from '../../../context/AuthContext'
+import { UserAuth} from '../../../context/AuthContext'
 import { showSignUpError } from '../../../firebase/firebaseErrorsHandle'
 import { toast } from 'react-toastify'
 import axios from '../../../axios/axios'
+import { auth } from '../../../firebase/firebase'
+import { sendEmailVerification,updateCurrentUser} from 'firebase/auth'
 
 
 export const Register = () => {
     const { register, handleSubmit,getValues,reset,formState: { errors }} = useForm({
         defaultValues: {
-            phoneNumber: '+38'
+            telephone: '+38'
         }
     });
-    const { createUser, updateUserInfo } = UserAuth();
+    const { createUser, updateUserInfo} = UserAuth();
     const navigate = useNavigate();
 
     const signUpEmailPassword = async (data) => {
         try {
             await createUser(getValues('email'), getValues('password'));
-            await updateUserInfo(getValues('fullName'),getValues('phoneNumber'));
-            axios.post('users.json',data)
+            await updateUserInfo(getValues('fullName'), getValues('telephone'));
+            await sendEmailVerification(auth.currentUser).then(() => toast.warning('E-mail verification sent!'))
             toast.success('Your account has been created!');
             navigate("/account");
         } catch (error) {

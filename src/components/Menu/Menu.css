@@ -92,6 +92,7 @@
 .ProductTitle {
     font-size: larger;
     text-shadow: 0px 0px 15px #b3a11f;
+    white-space: nowrap;
 }
 
 .ProductDescription {

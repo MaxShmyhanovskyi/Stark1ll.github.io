@@ -60,7 +60,9 @@
 .UserStatusButtons {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     margin-top: 20px;
+    place-items: center;
     gap: 10px;
 }
 
@@ -78,6 +80,11 @@ text-decoration: none;
 border: none;
 border-radius: 50px;
 transition: all .2s ease-in-out;
+}
+
+.resetPassword {
+  width: 30%;
+  margin: 0 auto;
 }
 
 .StatusButton a {
@@ -100,6 +107,7 @@ transition: all .2s ease-in-out;
 .option2 {
   background-image: linear-gradient(to right top, #928c8c, #d8d7d7); 
 }
+
 
 @media only screen and (max-device-width: 900px) {
   .AuthFormContainer form {

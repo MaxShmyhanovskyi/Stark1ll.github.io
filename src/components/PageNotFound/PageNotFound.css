@@ -1,36 +1,51 @@
 .PageNotFound {
     display: grid;
-    background-color: #e5e5f7;
-    background-image:  linear-gradient(30deg, #46189d 12%, transparent 12.5%, transparent 87%, #46189d 87.5%, #46189d), linear-gradient(150deg, #46189d 12%, transparent 12.5%, transparent 87%, #46189d 87.5%, #46189d), linear-gradient(30deg, #46189d 12%, transparent 12.5%, transparent 87%, #46189d 87.5%, #46189d), linear-gradient(150deg, #46189d 12%, transparent 12.5%, transparent 87%, #46189d 87.5%, #46189d), linear-gradient(60deg, #46189d77 25%, transparent 25.5%, transparent 75%, #46189d77 75%, #46189d77), linear-gradient(60deg, #46189d77 25%, transparent 25.5%, transparent 75%, #46189d77 75%, #46189d77);
-    background-size: 16px 28px;
-    background-position: 0 0, 0 0, 8px 14px, 8px 14px, 0 0, 8px 14px;
+    background:  radial-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+        ), url('../../assets/images/PageNotFound/NotFoundBG.png');
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: 250px;
     height: calc(100vh - 7.6em);
     place-items: center;
+    display: grid;
+    grid-template: 20% 10% 1fr / 1fr;
+    color: #fff;
 }
 
 .PageNotFoundHeader {
-    font-size: 74px;
-    color: #04040a;
-    font-weight: 600;
-    font-style: oblique;
-    text-shadow: 0px 3px 22px #ff3bef;
+    font-size: 24px;
+    background-color: #0c374dc7;
+    font-weight: 400;
+    padding: 15px;
+    text-align: center;
+    border: 3px solid #f8df1fc7;
+}
+
+.PageNotFoundInner {
+    align-self: start;
+
 }
 
 .PageNotFoundInner a {
     display: block;
-    font-size: 1.6em;
+    font-size: 1em;
     text-decoration: none;
     text-shadow: 3px 0px 15px #0b0535c7;
-    transition: transform .3s ease-in-out;
+    transition: all .2s ease-in-out;
     border-radius: 45px;
     padding: 1%;
 }
 
 .PageNotFoundInner a:hover {
-    transition: transform .3s ease-in-out;
-    background-color: #180c6880;
+    transition: all .2s ease-in-out;
+    background-color: #1c2e3d;
     text-shadow: 3px 0px 15px #f8df1f;
     color: #dfcf55d8;
     border-style: none;
-    transform: scale(1.05);
+}
+
+.NotFoundGoToMenu {
+    font-size: 35px
 }

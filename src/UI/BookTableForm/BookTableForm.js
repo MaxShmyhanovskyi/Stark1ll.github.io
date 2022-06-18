@@ -37,7 +37,10 @@ export const BookTableForm = () => {
         <form className='BookTableForm' onSubmit={handleSubmit(onSubmit)}>
           <span className='BookTableTitle'>Visit Us:</span>
           {renderFormInputs(getBookingFormControlValues(getValues),register,errors)}
-          <button className='SumbitTableBooking bn22' type='sumbit'>Book a table!</button>
+          <div>
+            <button className='SumbitTableBooking bn22' type='sumbit'>Book a table!</button>
+            
+          </div>
         </form>
       </AuthContextProvider>
           

@@ -15,7 +15,7 @@ export const AccountNavbar = () => {
           Order History
         </NavLink>
         <NavLink to='/account/delivery'>
-          Your delivery addresses
+          Delivery addresses
         </NavLink>
     </div>
   )
