@@ -1,0 +1,78 @@
+.DeliveryAddresses {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.DeliveryAddressesContainer {
+    display: grid;
+    grid-template: 7fr 1fr / 1fr;
+    place-items: center;
+}
+
+.AddDeliveryAddress a  {
+    text-decoration: none;
+}
+
+.SavedDeliveryAddresses {
+    min-width: 100%;
+    margin-top: 15px;
+    display: grid;
+    gap: 2% 1%;
+}
+
+.SavedAddressCard {
+    background: #141a1fe3;
+    display: grid;
+    height: 100%;
+    color: #fff;
+    border-radius: 15px;
+    min-width: 400px;
+}
+
+.AddressTitle {
+    font-size: 24px;
+    color: rgba(189, 241, 217, 0.89);
+    
+}
+
+.AddressCardField {
+    place-items: start;
+    display: grid;
+    gap: 0px 10px;
+    grid-template-columns: 40% 60%;
+    padding: 0 5px 1px;
+    align-items: center;
+    word-wrap: break-word;
+}
+
+.AddressfieldInfo {
+    text-align: start;
+    max-width: 225px;
+    
+}
+
+.addDeliveryAddressButton {
+    width: 200px;
+}
+
+.DeleteAddressAddress {
+    height: 25px;
+    width: 130px;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+    .DeliveryAddressesContainer {
+    }
+
+    .SavedDeliveryAddresses {
+        grid-template: 1fr / auto;
+    }
+
+    .SavedAddressCard {
+        width: 95%;
+        margin: 0 auto;
+    }
+  }

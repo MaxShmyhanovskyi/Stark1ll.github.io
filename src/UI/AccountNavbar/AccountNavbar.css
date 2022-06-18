@@ -3,15 +3,13 @@
     box-shadow: 0 0 10px 5px rgb(0 0 0 / 10%);
     background-color: #141a1f;
     background-size: cover;
-    width: 80%;
     height: 100%;
     max-width: 250px;
     max-height: 160px;
     place-content: center;
     display: grid;
-    margin-top: 15%;
-    gap: 5%;
-    
+    gap: 2%;
+    padding: 8px 16px;
 }
 
 
@@ -20,25 +18,25 @@
     height: 100%;
     text-decoration: none;
     color: #fff;
-    transition: all .2s;
+    transition: color .2s;
+    white-space: nowrap;
 }
 
 .AccountNavbar a:hover {
-    transition: all .2s;
+    transition: color .3s;
     color: #FAD02C;
-    font-size: large;
 }
 
 
 @media only screen and (max-width: 700px) {
     .AccountNavbar {
-        grid-template-columns: repeat(3,1fr);
+        grid-template: repeat(3,1fr) / 1fr;
         padding: 2px;
-        width: 100%;
         place-content: center;
-        margin-top: 2%;
-        max-height: 140px;
-        max-width: 300px;
-        padding: 0 10px;
+        margin: 3% auto;
+        padding: 7px 15px;
+        max-width: 100%;
+        border-radius: 20px;
+
     }
   }

@@ -13,29 +13,31 @@ export const ShoppingCart = (props) => {
     const {user} = UserAuth();
     const context = useContext(ShoppingContext);
     const navigate = useNavigate();
-    
     const cartItemNumber = context.cart.reduce((count, currentItem) => count + currentItem.quantity, 0);
 
     const getCartPriceValue = () => 
-      context.cart.map(product => product.price).filter(Boolean)
-      .reduce((summary, currentProductPrice) => summary += currentProductPrice, 0);
+      context.cart.reduce((summary, currentProduct) => summary += currentProduct.price, 0);
 
     const getOrderProducts = () => {
-      const productsInfo = context.cart.map(product => product = product.title + `.\n` + `Quantity: ${product.quantity}`).filter(Boolean);
-
-      productsInfo.push(` Total Amount: ${getCartPriceValue()} UAH`)
+      const productsInfo = context.cart.map(product => product = product.title + `.` + ` ${product.quantity} pcs`).filter(Boolean);
+      
+      productsInfo.push(` Total Amount: ${getCartPriceValue()} UAH`, `Was placed on: ${new Date().toISOString().slice(0, 10)}`);
       
       return productsInfo;
     };
 
-    const handleOrderSubmint = () => {
+    const handleOrderSubmint = async () => {
       try {
-        axios.post(`/users/${user.uid}/orders.json`, getOrderProducts());
+        await axios.post(`/users/${user.uid}/orders.json`, getOrderProducts())
         toast.success('Your Order was placed!');
-        localStorage.clear();
         navigate('/');
-        window.location.reload();
+        localStorage.clear(getOrderProducts());
+        setTimeout(() => {
+          window.location.reload();
+        }, '2000');
+        
       } catch (error) {
+        toast.error('ERROR!')
         console.log(error)
       }
     }

@@ -7,12 +7,23 @@ import {
     updateProfile,
 } from 'firebase/auth'
 import { auth } from '../firebase/firebase';
+import { toast } from 'react-toastify';
  
 
 const userContext = createContext();
 
 export const AuthContextProvider = ({children}) => {
     const [user,setUser] = useState({})
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        })
+            
+        
+        return () => {
+            unsubscribe();
+        }
+    }, [])
 
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
@@ -27,23 +38,10 @@ export const AuthContextProvider = ({children}) => {
         return signOut(auth)
     }
 
-    const updateUserInfo = (fullName, phoneNumber) => updateProfile(auth.currentUser, {
+    const updateUserInfo = (fullName) => updateProfile(auth.currentUser, {
         displayName: fullName,
-        phoneNumber: phoneNumber,
-    })
+    }).then(() => toast.success('Full Name was updated!'))
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            console.log(currentUser);
-            
-            setUser(currentUser);
-        })
-            
-        
-        return () => {
-            unsubscribe();
-        }
-    }, [])
 
     return (
         <userContext.Provider value={{ createUser, user, logout, updateUserInfo, userLogIn}}>

@@ -77,16 +77,14 @@
         max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
+        grid-template: 1fr 1fr / 1fr;
         align-items: center;
         height: 100%;
     }
 
     .RestaurantCards {
         display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template: 1fr / 1fr 1fr ;
         margin: 0 auto;
         gap: 0 25px;
     }

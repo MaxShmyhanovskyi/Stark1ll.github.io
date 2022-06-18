@@ -4,8 +4,8 @@ function NotFoundIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width='800px'
-      height="600px"
+      width='400px'
+      height="300px"
       version="1.1"
       viewBox="0 0 1072.947 1077.827"
       xmlSpace="preserve"

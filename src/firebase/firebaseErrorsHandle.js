@@ -27,3 +27,11 @@ export const showSignUpError = (error) => {
     }
 
 }
+
+export const showResetPasswordError = (error) => {
+    if (error.code === AuthErrorCodes.USER_DELETED) {
+        toast.error('No such E-mail found!')
+    } else {
+        toast.error('Please, enter E-mail address!')
+    }
+}

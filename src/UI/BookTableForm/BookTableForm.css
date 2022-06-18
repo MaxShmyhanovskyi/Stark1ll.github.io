@@ -11,12 +11,13 @@
 }
 
 .BookTableForm {
+    text-align: center;
     padding: 15px;
     margin: 35px auto 25px auto;
     display: grid;
     background-color: #141a1f;
     background-size: cover;
-    justify-items: center;
+    place-items: center;
     border-radius: 25px;  
     gap: 5px;
 }

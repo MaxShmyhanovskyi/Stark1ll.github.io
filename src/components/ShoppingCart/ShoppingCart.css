@@ -55,7 +55,7 @@
     background: #0e092cb0;
     text-shadow: 3px 0px 15px #f8df1f;
     color: #dfcf55d8;
-    border-radius: 90px;
+    border-radius: 25px;
 
 }
 
@@ -127,13 +127,13 @@
 @media only screen and (max-width: 900px) {
 
     .ShoppingCartInner {
-        grid-template: 4fr 1fr / 1fr;
+        grid-template: 6fr 1fr / 1fr;
     }
 
     .ShoppingCartProducts {
         width: 95%;
         gap: 10px;
-        grid-template: auto / 1fr 1fr;
+        grid-template: auto / 1fr;
     }
     
     .CartProductCard {
@@ -151,5 +151,6 @@
     .OrderDetails {
         width: 70%;
         grid-template-rows: 40% 1fr;
+        margin-bottom: 5px;
     }
 }

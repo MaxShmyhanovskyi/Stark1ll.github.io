@@ -1,29 +1,30 @@
 import React from 'react'
-import { useForm,useFormState} from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { UserAuth } from '../../../context/AuthContext';
 import { renderFormInputs } from '../../../UI/renderFormInputs';
-import { getUserInfoFormControlValues } from '../../../constans';
 import { getRegisterFormControlValues } from '../../../constans';
-import { auth } from '../../../firebase/firebase';
+import './AccountInformation.css'
 
 export const AccountInformation = () => {
-    const { user, logout } = UserAuth();
-    const { register, handleSubmit,getValues,control,formState: { errors }} = useForm({
+    const { user, logout,updateUserInfo } = UserAuth();
+    
+    const { register, handleSubmit,getValues,control,formState: { errors, dirtyFields}} = useForm({
         defaultValues: {
             fullName: `${user.displayName}`,
-            phoneNumber: `${user.phoneNumber}`,
             email: `${user.email}`,
-            
         }
     });
+    const onSubmit = () => {
+        return updateUserInfo(getValues('fullName'));
+    }
 
-    
+
   return (
       <div>
         <form className='BookTableForm'>
             <span className='AuthTitle'>Account Information:</span>
             {renderFormInputs(getRegisterFormControlValues(getValues),register,errors)}
-            <button className='StatusButton submit' type='sumbit'>Save edits</button>
+            <button className='StatusButton submit' type='sumbit' onClick={handleSubmit(onSubmit)}>Save edits</button>
         </form>
     </div>
   )
