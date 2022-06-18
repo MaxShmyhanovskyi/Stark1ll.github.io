@@ -10,7 +10,7 @@ import { AccountInformation } from './AccountInformation/AccountInformation'
 import { AddDeliveryAddress } from './DeliveryAddresses/AddDeliveryAddress/AddDeliveryAddress'
 
 export const Account = (props) => {
-  const { user, logout } = UserAuth();
+  const { user } = UserAuth();
   const location = useLocation();
 
   const pageTitle = useMemo(() => ({

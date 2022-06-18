@@ -1,6 +1,5 @@
 import React from 'react'
 import './Chefs.css'
-import { ContainerTop } from '../Containers/ContainerTop/ContainerTop'
 import chef1 from './chef1.jpg'
 import chef2 from './chef2.jpg'
 import chef3 from './chef3.jpg'

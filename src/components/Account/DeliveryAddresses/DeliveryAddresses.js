@@ -30,9 +30,6 @@ export const DeliveryAddresses = () => {
     SavedDeliveryAddresses.forEach(address => axios.post(`users/${user.uid}/addresses.json`, address));
   }, [user.uid,SavedDeliveryAddresses,setSavedDeliveryAddresses])
 
-  const showDeliveryAddressesState = () => {
-    console.log(SavedDeliveryAddresses)
-  }
 
   const renderSavedAddresses = () => 
     SavedDeliveryAddresses.map((address, index) => 

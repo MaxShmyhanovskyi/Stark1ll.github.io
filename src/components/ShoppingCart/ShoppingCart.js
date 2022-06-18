@@ -19,7 +19,7 @@ export const ShoppingCart = (props) => {
       context.cart.reduce((summary, currentProduct) => summary += currentProduct.price, 0);
 
     const getOrderProducts = () => {
-      const productsInfo = context.cart.map(product => product = product.title + `.` + ` ${product.quantity} pcs`).filter(Boolean);
+      const productsInfo = context.cart.map(product => product = product.title + `. ${product.quantity} pcs`).filter(Boolean);
       
       productsInfo.push(` Total Amount: ${getCartPriceValue()} UAH`, `Was placed on: ${new Date().toISOString().slice(0, 10)}`);
       
@@ -87,7 +87,7 @@ export const ShoppingCart = (props) => {
             ? 
             <div className='OrderDetails'>
               <div>
-                <span>Food: {cartItemNumber} pcs</span>
+                <span>Items: {cartItemNumber} pcs</span>
                 <br/>
                 <span>Total price: {getCartPriceValue()} UAH</span>
               </div>
