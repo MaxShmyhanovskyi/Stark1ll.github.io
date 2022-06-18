@@ -20,14 +20,11 @@ export const OrderHistory = () => {
          })
      }
      )},[user.uid]);
-        
-  const fetchOrderHistory = async () => {
-  };
   
   const renderOrderHistory = () => {
     return orderHistory.orders.map((order,index) => 
       <div className='OrderHistoryCard' key={index}>
-        Order: #{index + 1000} //crutch!
+        Order: #{index + 1000}
       {
       order.map( (orderField,index) => {
         return (
@@ -36,14 +33,30 @@ export const OrderHistory = () => {
             );
           })}
           </div>
-  )
-}
+    )
+  }
+  
+  const renderEmptyOrderHistory = () =>  {
+    return (
+      <>
+      <div className='ProductTitle'>Past orders not found!</div>
+      <div>
+        <button className='StatusButton submit'>Create first order</button>
+      </div>
+      </>
+    )
+  }
+
   
   return (
     <div className='OrderHistory'>
       <div className='OrderHistoryContainer'>
           <div className='OrderHistoryInner'>
-            {(orderHistory.isDataLoaded) ? renderOrderHistory() : <div className='EmptyShoppingCart'>No data Loaded!</div>}
+            {
+              (orderHistory.isDataLoaded) ? 
+              renderOrderHistory() : 
+              renderEmptyOrderHistory()
+            }
           </div>
       </div>
     </div>

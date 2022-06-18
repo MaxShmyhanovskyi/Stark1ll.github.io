@@ -64,9 +64,6 @@
 }
 
 @media only screen and (max-width: 700px) {
-    .DeliveryAddressesContainer {
-    }
-
     .SavedDeliveryAddresses {
         grid-template: 1fr / auto;
     }

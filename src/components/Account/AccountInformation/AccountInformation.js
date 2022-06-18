@@ -6,9 +6,9 @@ import { getRegisterFormControlValues } from '../../../constans';
 import './AccountInformation.css'
 
 export const AccountInformation = () => {
-    const { user, logout,updateUserInfo } = UserAuth();
+    const { user,updateUserInfo } = UserAuth();
     
-    const { register, handleSubmit,getValues,control,formState: { errors, dirtyFields}} = useForm({
+    const { register, handleSubmit,getValues,formState: { errors }} = useForm({
         defaultValues: {
             fullName: `${user.displayName}`,
             email: `${user.email}`,

@@ -142,34 +142,6 @@ export const menu = {
     },
 }
 
-// export const getPersonalInfoFormContolValues = (getValues) =>
-
-//   ({
-//     fullName: {
-//       type: "text",
-//       placeholder: 'Full Name',
-//       name: 'fullName',
-//       options: {
-//         required: "Full Name required",
-//         maxLength: {
-//           value: 40,
-//           message: 'Maximum 40 characters!'
-//         },
-//         pattern: {
-//           value: /\w+\s\w+/,
-//           message: 'Please, enter correct Full Name',
-//         }
-//       }
-//     },
-//     changeFullNameButton: {
-//       type: "button",
-//       name: 'changeFullNameButton',
-//       placeholder: "Change Full Name",
-//       onclick: () => console.log('Button')
-//     }
-//   });
-
-
 export const getRegisterFormControlValues = (getValues) => 
 
   ({
@@ -196,7 +168,7 @@ export const getRegisterFormControlValues = (getValues) =>
     options: {
       required: "E-mail address is required",
       pattern: {
-        value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+        value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
         message: 'Please, enter correct E-mail'
         }
     }
@@ -231,7 +203,7 @@ export const getSignInFormControlValues = () => ({
     options: {
       required: "E-mail address is required",
       pattern: {
-        value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+        value: /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/,
         message: 'Please, enter correct E-mail'
         }
     }
@@ -273,7 +245,7 @@ export const getBookingFormControlValues = () => ({
     options: {
       required: "Phone number required",
       pattern: {
-        value: /^[\+]?[0-9]{12}$/,
+        value: /^[+]?[0-9]{12}$/,
         message: 'Inccorect phone number',
         }
     }
@@ -333,7 +305,7 @@ export const getUserDeliveryAddressFormControls = (getValues) => ({
     options: {
       required: "Phone number required!",
       pattern: {
-        value: /^[\+]?[0-9]{12}$/,
+        value: /^[+]?[0-9]{12}$/,
         message: 'Inccorect phone number',
         }
     }
@@ -345,7 +317,7 @@ export const getUserDeliveryAddressFormControls = (getValues) => ({
     options: {
       required: "E-mail address is required",
       pattern: {
-        value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+        value: /^[\w-]+@([\w-]+\.)+[\w-]{2,4}$/,
         message: 'Please, enter correct E-mail'
         }
     }
